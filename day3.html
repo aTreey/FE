@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第三天内容学习</title>
+    <!-- <style>.title{font-size: 20px; color: red;}</style> -->
+
+    <script>
+        let name = "前端基础学习";
+        console.log(name);
+    </script>
+
+    <!-- script 或 link方式 -->
+    <script src="./xx.js"></script>
+
+    <script>
+        window.onload = function() {
+            // 此处可以操作DOM
+            console.log('在head 中使用onload 方法监听页面加载完成');
+        }
+    </script>
+    
+</head>
+<body>
+    <p>
+        head标签中可以定义的数据类型
+        1. 定义基本的元数据信息，
+        2. CSS样式
+        3. 定义 JavaScript 内容, 会阻塞页面加载，一般定义在body标签中
+        4. 定义title 标签
+    </p>
+    <p class="title">body中使用script</p>
+    <script>
+        console.log("body中使用script");
+    </script>
+</body>
+</html>

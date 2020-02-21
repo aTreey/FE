@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器的作用在于「选择」，目的是为了能够把定义好的 CSS 样式作用于指定 HTML 标签上，比如想让 p 标签的字体颜色变为红色</title>
+    <link rel="stylesheet" href="./day7.css">
+</head>
+
+<body>
+    <ol>
+        <li>class 选择器：以 “.” 开头，后跟一个名字。在一个HTML中，类选择器可以作用于多个 HTML 标签。</li>
+        <li>ID 选择器以 “#” 开头，后跟一个选择器的名字，名字必须在当前文档唯一</li>
+        <li>通用选择器（Universal selector）：单独一个“ * ”，作用于所有的标签。下面的例子，清除 HTML 中所有标签的默认边距。</li>
+        <li>属性选择器（Attribute selectors）：根据属性来匹配HTML元素，通过下面的例子你可以明白如何使用属性选择器。</li>
+        <li>伪选择器（pseudo-selectors）：它包含伪类（pseudo-classes）和伪元素（pseudo-elements</li>
+        <li>组合选择器  可以作用于多个 HTML 元素，有多种组合</li>
+    </ol>
+
+    <a href="https://developer.mozilla.org/" target="_blank">Click me</a>
+
+    <p class="first">超越技术</p>
+    <div>哈哈哈.</div>
+    <p id="second">一起学前端。</p>
+
+    <ul>
+        <li data-quantity="1kg" left>Tomatoes</li>
+        <li data-quantity="3" left>Onions</li>
+        <li data-quantity="3" left>Garlic</li>
+        <li data-quantity="700g" left="not spicy like chili">Red pepper</li>
+        <li data-quantity="2kg" data-meat>Chicken</li>
+        <li data-quantity="optional 150g" data-meat>Bacon bits</li>
+        <li data-quantity="optional 10ml" left="liquid">Olive oil</li>
+        <li data-quantity="25cl" left="liquid">White wine</li>
+    </ul>
+
+    <div>
+        <p>|__div->p1</p>
+        <p>|__div->p2</p>
+
+        <section>
+            <p>|____div->section->p</p>
+            <p>|____div->section->p</p>
+            
+            <div>|____div->section->div</div>
+        </section>
+    </div>
+
+    <p>|__>p1</p>
+    <p>|__>p2</p>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+
+
+.main {
+    margin: 20px auto;
+    background-color: aquamarine;
+    display: flex;
+    width: 600px;
+    height: 80px;
+}
+
+h1 {
+    width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+p {
+    width: 600px;
+    font-size: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px 5px;
+}
+
+div div {
+    height: 40px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grow0 {
+    flex-grow: 0;
+}
+.grow1 {
+    flex-grow: 0.5;
+}
+
+.shrink {
+    flex-shrink: 1;
+}
+
+.basis {
+    flex-basis: 0;
+}
+
+.basis1 {
+    flex-basis: 120px;
+}
+
+.order-1 {
+    order: -1;   
+}
+
+.order3 {
+    order: 3;   
+}
+
+.order-1 {
+    order: -1;   
+}
+
+div div:nth-child(1) {
+    order: 3;
+    background-color: red;
+}
+
+div div:nth-child(2) {
+    background-color: black;
+}
+
+div div:nth-child(3) {
+    background-color: purple;
+    order: -1;
+}

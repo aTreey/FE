@@ -1,0 +1,91 @@
+
+body {
+    background-color: white;
+}
+
+h1 {
+    width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+p {
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px 5px;
+}
+
+.main {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-start {
+    align-content: flex-start;
+}
+
+.flex-end {
+    align-content: flex-end;
+}
+
+.space-around {
+    align-content: space-around;
+}
+
+.space-evenly {
+    align-content: space-evenly;
+}
+
+.space-between {
+    align-content: space-between;
+}
+
+.center {
+    align-content: center;
+}
+
+.stretch {
+    align-content: stretch;
+}
+
+div div {
+    text-align: center;
+    font-size: 20;
+    font-weight: bold;
+    padding: 10px;
+    width: 150px;
+    color: white;
+}
+
+div div:nth-child(1){
+    background-color: red;
+}
+div div:nth-child(2){
+    background-color: purple;
+}
+div div:nth-child(3){
+    background-color: blue;
+}
+div div:nth-child(4){
+    background-color: green;
+}

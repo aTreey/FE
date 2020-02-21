@@ -1,0 +1,53 @@
+.title-block {
+    display: block;
+    color: white;
+    background-color: rgb(66, 209, 173);
+}
+
+.title-block1 {
+    display: block;
+    color: white;
+    background-color: rgb(66, 209, 173);
+    width: 80px;
+    height: 40px;
+    padding: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin-top: 30px;
+}
+.title-inline {
+    display: inline;
+    color: white;
+    background-color: rgb(66, 209, 173);
+    padding: 10px;
+}
+.title-inlineBlock {
+    display: inline-block;
+    color: white;
+    background-color: rgb(66, 209, 173);
+    width: 100px;
+    height: 60px;
+}
+.std-box {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 10px solid red;
+    margin: 30px;
+    background-color: antiquewhite;
+}
+.alternative-box {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 10px solid red;
+    margin: 30px;
+    background-color: rgb(180, 112, 23);
+    box-sizing: border-box;
+}

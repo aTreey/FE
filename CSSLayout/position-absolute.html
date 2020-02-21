@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position-absolute</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 1000px;
+        }
+
+        .box {
+            margin: 10px;
+            height: 400px;
+            background-color: antiquewhite;
+
+            /* 会影响 postion 为：absolute 的子视图，限制它的布局范围 */
+            position: relative;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        p:nth-child(1) {
+            background-color: red;
+        }
+
+        p:nth-child(2) {
+            background-color: green;
+            /* absolute 布局的关键点选择哪一个元素作为布局区域，如果元素的所有父元素均未设置 position 属性（值为 static），布局区域会选择可视区域。如果某个父元素使用了  position 属性（值不为 static），布局区域会选择这个父元素作为布局区域。这种效果有一种约束的感觉，会把子元素限制在父元素内部，不让其“乱跑”。修改上面代码中的选择器： */
+            position: absolute;
+            /* top: 0;
+            left: 0; */
+            bottom: 0;
+            right: 0;
+        }
+
+        p:nth-child(3) {
+            background-color: black;
+        }
+    </style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- <div>
+        <p>flex box 学习</p>
+        <p>ReactNative 学习</p>
+        <p>position-absolute 学习</p>
+    </!-->
+
+    <div class="box">
+        <p>flex box 学习</p>
+        <p>ReactNative 学习</p>
+        <p>position-absolute 学习</p>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

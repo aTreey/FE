@@ -1,0 +1,91 @@
+.main {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: flex;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto; /* 设置边距，元素水平居中。*/
+    padding: 5px 5px;
+    
+}
+
+p {
+    width: 600px;
+    margin: 10px auto;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    text-align: left;
+    color: darkblue;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+/* 
+justify-content: 它决定「主轴」items 的对齐方式, 主轴不一定是水平方向，不能把 justify-content 看做是控制水平方向的对齐方式
+- flex-start（默认）：与主轴的起始位置（main start）对齐；
+- flex-end：与主轴的结束位置（main end）对齐;
+- center：居中于主轴；
+- space-around: 左右边距是中间的 1/2；
+- space-evenly: 每个 item 的间距相等
+- space-between: 左右无边距；
+*/
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+div div {
+    text-align: center;
+    font-size: 40;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+div div:nth-child(1){
+    background-color: red;   
+}
+div div:nth-child(2){
+    background-color: #BD10E0;   
+}
+div div:nth-child(3){
+    background-color: blue;   
+}

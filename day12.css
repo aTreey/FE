@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(106, 223, 197);
+}
+
+.des {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+.strong-inline {
+    display: inline;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+
+    /* 无效
+    width: 150px;
+    height: 80px; */
+}
+.strong-block {
+    display: block;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 100px;
+}
+.strong-inlineBlock {
+    display: inline-block;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 100px;
+}
+.strong-none {
+    display: none;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 100px;
+}
+.strong-flex {
+    display: flex;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 100px;
+}
+.strong-grid {
+    display: grid;
+    color: red;
+    border: 1px solid yellow;
+    padding: 10px;
+    margin: 20px;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 100px;
+}

@@ -1,0 +1,45 @@
+
+
+/* 1、float：为了做文字环绕，后来做布局，类似于行内元素，会一个挨着一个进行布局，从左到右 */
+p {
+    float: right;
+    color: lightcoral;
+}
+
+/* 2、position：脱离流式布局，放到指定位置 */
+p {
+    
+    /* static：默认值，流式布局；
+    relative：相对布局，相对的基准是元素在流式布局的位置；
+    absolute：绝对布局，相对的基准是最近一个使用 position 不为 static 的父元素；
+    fixed：固定在可视区域的某一个位置；
+    sticky：当滑动到某个位置时悬停在某个位置，类似于 iOS 中 UITableview 的 section header 悬停效果。 */
+
+    position: relative;
+    left: 10px;
+    right: 10px;  
+}
+
+/* 3、Flexbox 
+    - 首先需要指定它的父元素为一个 flexbox 容器，
+    - 容器具有一些属性决定子元素如何摆放。
+    - 每个子元素也具有自己的属性来决定自己如何展示。
+    - 它具有「弹性」，子元素会根据父元素的尺寸来决定自己该占用多大的空间 */
+p {
+    display: flex;
+}
+
+/* 4、grid 行和列的二维布局 */
+p {
+    display: grid;
+}
+
+/* 5、table，用来做表格 */
+p {
+    display: table;
+}
+
+/* 多列布局 */
+p {
+    column-width: 100px;
+}

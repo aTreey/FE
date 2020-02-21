@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b6e7a5;
+}
+
+.app {
+    background-color: #413838;
+}
+
+.top {
+    background-color: #d86d6d;
+}
+
+.top div {
+    height: 200px;
+    margin-bottom: 20px;
+    background: yellow;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+
+.top :nth-child(1){
+    background-image: url('./images/640-1.png');
+}
+.top :nth-child(2){
+    background-image: url('./images/640-2.jpeg');
+}
+.top :nth-child(3){
+    background-image: url('./images/640-3.jpeg');
+}
+.top :nth-child(4){
+    background-image: url('./images/640-4.jpeg');
+}
+.top :nth-child(5){
+    background-image: url('./images/640-5.jpeg');
+}
+.top :nth-child(6){
+    background-image: url('./images/640-6.jpeg');
+}
+.content {
+    background-color: cyan;
+    padding-bottom: 30px;
+}
+
+.content p {
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #2d85f8;
+    width: 160px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.title-active {
+    color: violet;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* @media 语法规则是：
+
+@media mediaType and|not|only (media feture) {
+  // css
+} */
+
+@media screen and (min-width: 700px) {
+    .app {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    .top {
+        width: 40%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .top div {
+        height: 250px;
+    }
+    .content {
+        width: 60%;
+        margin-right: 30px;
+    }
+    .hidden {
+        display: block;
+    }
+}

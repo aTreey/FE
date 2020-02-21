@@ -1,0 +1,60 @@
+
+/* 清除标签默认边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* class 选择器，经常用到，以 . 开头*/
+.title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.line {
+    height: 2px;
+    background-color: blue;
+    margin-bottom: 2px;
+}
+
+ /* 为选择器 */
+
+div > span {
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+div :first-child {
+    margin-left: 15px;
+}
+
+div :last-child {
+    margin-right: 15px;
+}
+
+/* id选择器, # 开头，一个html中只有一个 */
+/*  white-space 遇到「空格」该如何处理 */
+#nav-box {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #0077FF;
+}
+
+#button {
+    height: 40px;
+    line-height: 40px;
+    background-color: #0077FF;
+    border-radius: 4px;
+    color: white;
+    margin: 100px auto;
+    width: 200px;
+    text-align: center;
+}
+
+#d {
+    color: red;
+}

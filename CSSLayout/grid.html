@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>grid 布局样式</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        /* .main {
+            display: grid;
+        }
+
+        div div {
+            background-color: cyan;
+            margin-top: 0px;
+            text-align: center;
+            line-height: 40px;
+        } */
+
+        .main {
+            width: 400px;
+            height: 200px;
+            background-color: white;
+        }
+
+        .container {
+            /* 使用固定宽度，在 container 中设置具体的值，不同值使用空格隔 */
+            /* grid-template-columns: 90px 120px; */
+
+            /* 使用百分比，直接占满容器 40% + 60% = 100%： */
+            /* grid-template-columns: 40% 60%; */
+
+            /* 使用弹性单位  fr */
+            /* grid-template-columns: 1fr 2fr; */
+
+            /* 使用关键字 auto，它会填满容器的可用空间 */
+            /* grid-template-columns: 100px auto; */
+
+            /* 使用 minmax 设置长度范围，接受 2 个参数，分别表示最大值和最小值。下面设置列的最小宽度为 100px，最大宽度为 1fr */
+            /* grid-template-columns: minmax(100px, 1fr) 1fr; */
+
+            /* 使用 repeat 可以表示多个值，grid-template-columns：repeat(2, 1fr) 与grid-template-columns：1fr 1fr 等价 */
+            /* grid-template-columns: repeat(2, 1fr); */
+
+            /* <7>.max-content: 内容的最大宽度 */
+            grid-template-columns: repeat(2, max-content);
+
+            display: grid;
+        }
+        
+        div div {
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-weight: bold;
+        }
+
+        div div:nth-child(1) {
+            background-color: #FE0000;
+        }
+        div div:nth-child(2) {
+            background-color: #F5A623;
+        }
+        div div:nth-child(3) {
+            background-color: #BD10E0;
+        }
+        div div:nth-child(4) {
+            background-color: #F04A4D;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="main container">
+        <div>前端知识</div>
+        <div>grid布局学习</div>
+        <div>ReactNative</div>
+        <div>iOS开发</div>
+        <div>Android开发</div>
+        <!-- <div>swiftUI</div> -->
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

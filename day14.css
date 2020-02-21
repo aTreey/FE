@@ -1,0 +1,57 @@
+a {
+    color: rgb(238, 36, 10);
+    font-size: 18px;
+}
+a:hover {
+    color: blue;
+}
+a:visited {
+    color: rgb(13, 158, 13);
+}
+.left {
+    color: black;
+    font-size: 15px;
+}
+.left::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('./images/640-7.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+.left::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('./images/640-7.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 4px;
+    width: 30px;
+    height: 30px;
+}
+.right {
+    color: black;
+    font-size: 15px;
+}
+.right::after {
+    content: '→';
+    display: inline-block;
+    color: blueviolet;
+    margin-left: 5px;
+}
+
+.right::first-line {
+    color: cyan;
+}
+.right::first-letter {
+    font-size: xx-large;
+    color: darkorange;
+}

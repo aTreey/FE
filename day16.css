@@ -1,0 +1,91 @@
+.bg-box {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+}
+.bg-box-animation {
+    animation: background-change 3s;
+}
+
+/* 动画的关键帧 */
+@keyframes background-change {
+    0% {
+        background-color: antiquewhite;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: brown;
+    }
+    75% {
+        background-color: peru;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+.move-box {
+    background-color: red;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.move-box-animation {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    /* 动画重复次数 */
+    animation-iteration-count: 10;
+    /* 动画方向，先正向后逆向 */
+    animation-direction: alternate;
+    /* 动画执行后的填充方式 */
+    animation-fill-mode: backwards;
+    /* 动画执行状态 */
+    animation-play-state: running;
+}
+@keyframes move {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        left: 100px;
+        top: 0;
+    }
+
+    50% {
+        left: 100px;
+        top: 100px;
+    }
+    75% {
+        left: 0;
+        top: 100px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+#move-transition-box {
+    background-color: cornflowerblue;
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.move-transition {
+    transition-property: background-color, height, width;
+    transition-duration: 1.8s, 1.0s, 1.0s;
+    transition-delay: 0.1s;
+    transition-timing-function: linear;
+}

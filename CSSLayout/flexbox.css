@@ -1,0 +1,119 @@
+/* 
+flex-direction: 布局方向，影响主轴的方向，以及items 的布局起点位置
+- row（默认）：从水平方向的左侧开始布局；
+- row-reverse：从水平方向的右侧开始布局；
+- column：从垂直方向的顶部开始布局；
+- column-reverse: 从垂直方向的底部开始布局； 
+*/
+.main {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: flex;
+    width: 400px;
+    height: 60px;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.container1 {
+    margin-top: 20px;
+    background-color: slategrey;
+    
+}
+
+h1 {
+    width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1.5px red solid;
+    margin: 10px auto; /*水平居中*/
+    margin-top: 50px;
+    padding: 5px 5px;
+    background-color: white;
+}
+
+p {
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px 5px;
+    background-color: white;
+}
+
+.flex-start-align {
+    align-content: flex-start;
+}
+
+.flex-end-align {
+    align-content: flex-end;
+}
+
+.space-around-align {
+    align-content: space-around;
+}
+
+.space-evenly-align {
+    align-content: space-evenly;
+}
+
+.space-between-align {
+    align-content: space-between;
+}
+
+.center-align {
+    align-content: center;
+}
+
+.main2 {
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    width: 400px;
+    height: 140px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 10px;
+}
+
+
+.main3 {
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    width: 400px;
+    height: 140px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 10px;
+}
+
+
+div div {
+    text-align: left;
+    font-size: 40;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    width: 100px;
+}
+
+div div:nth-child(1) {
+    background-color: red;
+}
+
+div div:nth-child(2) {
+    background-color: #BD10E0;
+}
+
+div div:nth-child(3) {
+    background-color: blue;
+}
+
+div div:nth-child(4) {
+    background-color: green;
+}

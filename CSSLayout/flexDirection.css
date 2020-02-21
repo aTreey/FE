@@ -1,0 +1,65 @@
+.main {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: flex;
+    width: 400px;
+    margin-bottom: 10px;
+}
+body {
+    background-color: gray;
+}
+h1 {
+    width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px red solid;
+    margin: 10px auto;
+    padding: 5px 5px;
+    background-color: white;
+}
+p {
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 1px red dashed;
+    margin: 10px auto;
+    padding: 5px 5px;
+    background-color: white;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    height: 200px;
+    flex-direction: column;
+}
+
+.column-reverse {
+    height: 200px;
+    flex-direction: column-reverse;
+}
+
+div div {
+    text-align: center;
+    font-size: 40;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+div div:nth-child(1){
+    background-color: red;   
+}
+div div:nth-child(2){
+    background-color: #BD10E0;   
+}
+div div:nth-child(3){
+    background-color: blue;   
+}

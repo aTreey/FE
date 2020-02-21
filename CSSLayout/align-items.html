@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex 布局 align-items 决定纵轴的对齐方式</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./align-items.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <h1>align-items</h1>
+    <h1>align-items:「纵轴」的对齐方式</h1>
+
+    <p>1. align-items: flex-start 与纵轴的起始位置（cross start）对齐</p>
+    <div class="main flex-direction-row align-items-flex-start">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+
+    <p>2. align-items: flex-end (flex-direction-row-reverse) </p>
+    <div class="main flex-direction-row-reverse align-items-flex-end">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+
+    <p>3. align-items: flex-end 与纵轴的结束位置（cross end）对齐 </p>
+    <div class="main align-items-flex-end">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+
+    <p>4. align-items: center 居中与纵轴</p>
+    <div class="main align-items-center">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+
+    <p>5. align-items: baseline 与基线对齐</p>
+    <div class="main align-items-baseline">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+
+    <p>6. align-items: stretch 扩展满纵轴 </p>
+    <div class="main align-items-stretch">
+        <div>前端学习</div>
+        <div>FlexBox布局 </div>
+        <div>RN</div>
+    </div>
+    
+    <script src="" async defer></script>
+</body>
+
+</html>

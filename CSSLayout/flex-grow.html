@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./flex-grow.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h1>Flew grow（扩展比例）占剩余空间的比例</h1>
+    <h1>flex-basis: auto</h1>
+    <p>flex-grow: 0:即使有剩余空间也不会扩展</p>
+    <div class="main">
+        <div class="grow0">FlexBox</div>
+        <div>Flew grow</div>
+        <div>FlexBox RN</div>
+    </div>
+
+
+    <h1>Flew grow (扩展比例) 占剩余空间的比例</h1>
+    <h1>flex-basis: auto</h1>
+    <p>flex-grow: 0.5:占剩余空间的一半</p>
+    <div class="main">
+        <div class="grow1">FlexBox</div>
+        <div>Flew grow</div>
+        <div>FlexBox RN</div>
+    </div>
+
+    <h1>flex-shrink(收缩比例)容器空间不足时占缺少空间的比例</h1>
+    <h1>flex-basis: auto</h1>
+    <p>flex-shrink: 1: 每个 item 将缩放同样的宽度</p>
+    <div class="main">
+        <div class="shrink">flexBox flex-shrink 收缩比例 </div>
+        <div>容器空间不足时占缺少空间的比例</div>
+        <div>设置为1时，每个 item 将缩放同样的宽度</div>
+    </div>
+
+
+    <h1>flex-basis（伸缩基准）：它表示 item 未扩展或收缩之前的宽度，可以理解为 item 未放入容器时该有的尺寸，默认值是 auto</h1>
+    <h1>flex-basis 为 0 时相当于所有的空间都可以进行分配，每个 item 的初始宽度为 0，这样就达到了所有的 item 宽度一样</h1>
+    <p>flex-shrink: 1: 每个 item 将缩放同样的宽度</p>
+    <div class="main">
+        <div class="basis1">flexBox</div>
+        <div class="basis0">flex-basis</div>
+        <div class="basis1">ReactNative 布局</div>
+    </div>
+
+    <div class="main">
+        <div class="basis0">flexBox</div>
+        <div>flex-basis</div>
+        <div>ReactNative 布局</div>
+    </div>
+
+    <h1>order 设置FlexBox 容器中的位置</h1>
+    <p>order 默认值为 0，值可以是负数/整数</p>
+    <div class="main">
+        <div class="order3">flexBox</div>
+        <div>flex-basis</div>
+        <div>ReactNative 布局</div>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body {
+    background-color: #eeeeee;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    background-image: url('./images/640-3.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.mini-logo {
+    width: 30px;
+    vertical-align: middle;
+}
+
+

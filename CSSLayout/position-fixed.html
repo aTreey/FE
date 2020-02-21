@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>position 布局之 fixed、sticky</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                height: 1000px;
+            }
+
+            .box {
+                margin: 10px;
+                height: 400px;
+                background-color: #eeeeee;
+            }
+            
+            p {
+                color: white;
+                font-size: 18px;
+                line-height: 40px;
+            }
+
+            p:nth-child(1) {
+                background-color: red;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            p:nth-child(2) {
+                background-color: green;
+            }
+
+            p:nth-child(3) {
+                background-color: black;
+            }
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="box">
+            <p>flex box 学习</p>
+            <p>ReactNative 学习</p>
+            <p>position-fixed 学习</p>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
