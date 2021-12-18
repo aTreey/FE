@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 告诉浏览器用哪一种字符集打开 -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>学习前端小课</title>
+    <title>学习前端小课</title> 
   </head>
 
-  <body>
+  <body bgcolor="red" background="./images/640-1.png">
     <p>欢迎学习前端小课</p>
+    <h1>标题</h1>
+    <h2>标题2</h2>
+    <h3>标题2</h3>
+    <div>
+      <p>我是div中的p标签<br/>前端真的很有意思</p>
+    </div>
+    <hr />
+    <del>已经删除的文案</del>
+    <br/>	
+    <b>粗体文字</b>
+    <br/>
+    <ins>插入文字</ins>
+    <br/>
+    <i>倾斜文字</i>
+    <br/>
+    10<sup>4</sup>
+    <br>
+    m<sup>n</sup>
+    <hr>
+    <font color="blue">字体标签</font>
+    <br>
+    <font siz=3>字体标签</font>
+
+    <hr color="red"/>
+    <!-- 预留格式 -->
+    预留格式标签
+    <pre>
+      if (isSuccess) {
+        console.log('哈哈哈')
+      }
+    </pre>
+    
+    实体符号：以&开始，以；结束------ 预留格式标签是&lt;pre&gt;
+    <p>实体符号: a&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;&nbsp;c</p>
+
+  
+    <center>表格</center>
+    <hr>
+    <table align="center" border="1" width="60%" height="100%" >
+      <thead>
+        <th colspan="5">表格中&lt;th&gt;标签会居中</th>
+      </thead>
+      <tbody>
+      <tr align="center">
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>bodyB1</td>
+        <td>bodyC1</td>
+        <td>bodyD1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>bodyB2</td>
+        <td>bodyC2</td>
+        <!-- 合并row单元格 删除下面的-->
+        <td rowspan="2">bodyD2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <!-- 合并行colum 单元格无要求 -->
+        <td colspan="2">bodyB3</td>
+        <td>bodyC3</td>
+        <!-- <td>bodyD3</td> -->
+      </tr>
+    </tbody>
+    </table>
+
+    
+
   </body>
 </html>
