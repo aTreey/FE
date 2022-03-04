@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米官网导航</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-image: url(./images/mibg.webp); */
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+            /* background-position: center; */
+            /* 精确单位 */
+            /* background-position: 20px 50px; */
+            /* 混合单位 */
+            /* background-position: center 50px; */
+            /* 制作视差滚动效果 */
+            /* background-attachment: fixed; */
+
+            /* 背景符合写法 */
+            background: transparent url(./images/mibg.webp) no-repeat fixed center 50px;
+        }
+
+        .sinNav {
+            height: 41px;
+            border-top: 3px solid orange;
+            border-bottom: 1px solid #edeef0;
+            background-color: #fcfcfc;
+            /* 行高可以继承，直接给父容器定义高度，不用每个子盒子都写一遍 */
+            line-height: 41px;
+        }
+
+        .sinNav a {
+            /* a属于行内元素，设置高度不生效，转为行内块元素 */
+            display: inline-block;
+            height: 41px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #4c4c4c;
+            /* padd 在不知道width的情况下不会撑开盒子 */
+            padding: 0 20px;
+        }
+
+        /* 鼠标覆盖时样式 */
+        .sinNav a:hover {
+            background-color: #eee;
+            color: orange;
+
+        }
+
+        /* 盒子水平居中 */
+        .header {
+            width: 300px;
+            height: 40px;
+            background-color: cyan;
+            /* 块级居中 auto ，必须要有宽度 */
+            margin: 0 auto;
+
+            /* 行内元素/行内块元素居中 */
+            text-align: center;
+        }
+
+        /* 块元素塌陷，子父都有marign */
+        .demoFather {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 40px;
+
+            /* 会导致盒子变大 */
+            /* border-top: 1px solid red; */
+            /* padding-top: 0.5px; */
+
+            overflow: hidden
+        }
+
+        .demoSon {
+            width: 30px;
+            height: 30px;
+            background-color: cyan;
+            margin-top: 20px;
+        }
+
+        /* *********** */
+        /* 小米官网导航 */
+        /* *********** */
+        .nav a {
+            display: inline-block;
+        }
+
+        .category {
+            padding-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .transparent {
+            background: rgba(0, 0, 0, 0.6);
+            color: red;
+        }
+
+        .category a {
+        display: block;
+        text-decoration: none;
+        width: 230px;
+        height: 50px;
+        background-color: #fcfcfc;
+        text-indent: 2em;
+        line-height: 50px;
+      }
+        a:hover {
+        background-color: orange;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- 新浪导航栏 -->
+    <div class="sinNav">
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航1</a>
+        <a href="#">新浪导航2</a>
+        <a href="#">新浪导航3</a>
+        <a href="#">新浪导航4</a>
+    </div>
+
+    <div class="header">
+        <span>我是 span 标签 行内元素</span>
+    </div>
+
+    <hr>
+    <div class="demoFather">
+        <div class="demoSon"></div>
+    </div>
+
+
+    <!-- <div class="nav">
+      <a href="#">导航栏</a>
+      <a href="#">导航栏</a>
+      <a href="#">导航栏</a>
+      <a href="#">导航栏</a>
+      <a href="#">导航栏</a>
+    </div> -->
+
+    <div class="category">
+      <a href="#"> 手机</a>
+      <a href="#"> 电视</a>
+      <a href="#"> 笔记本 平板</a>
+      <a href="#"> 家电</a>
+      <a href="#"> 出行</a>
+      <a href="#"> 智能 路由器</a>
+      <a href="#"> 手机</a>
+    </div>
+    
+    <!-- <div class="transparent">半透明</div>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p>
+    <p>background-position: center 50px 混合写法</p>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p>
+    <p>background 属性的写法</p> -->
+</body>
+
+</html>

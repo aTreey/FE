@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用类选择器画三个颜色的盒子</title>
+    <style>
+
+        /* 类选择器：样式点定义；结构（class）类调用，一个或多个 开发最常用 */
+        .red {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .green {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        /* id 选择器：样式#定义 结构id调用 只能调用一次 别人切勿调用*/
+        #pink {
+            color: pink;
+        }
+
+        /* 通配符选择器 */
+        * {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">红色</div>
+    <div class="green">绿色</div>
+    <div class="red">红色</div>
+
+    <div id='pink'>红色</div>
+    <div id='pink'>红色2</div>
+    <div id='pink'>红色3</div>
+    <div id='pink'>红色4</div>
+
+    
+</body>
+</html>
