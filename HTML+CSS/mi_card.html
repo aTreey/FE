@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-03-06 22:43:11
+ * @LastEditTime: 2022-03-07 16:21:12
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /FE/mi_card.html
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <style>
-        *{
+        *{ 
             margin: 0;
             padding: 0;
         }
         body {
             background-color: #F5F5F5;
         }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        
         .box {
             width: 200px;
             height: 300px;
@@ -32,12 +46,31 @@
             margin-top: 10px;
         }
 
-        .slogn{
+        .slogan{
             width: 100%;
             font-size: 12px;
             color: #B0B0B0;
-            margin-top: 10px;
             text-align: center;
+        }
+
+        .info {
+            width: 100%;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center
+        }
+
+        .info h4 {
+            display: inline-block;
+            font-weight:400;
+        }
+
+        .info span {
+            color: orange;            
+        }
+        .info em {
+            font-style: normal;
+            margin: 0 6px 0 6px;
         }
         
         .testBox {
@@ -51,7 +84,12 @@
     <div class="box">
         <img src="images/phone.webp" alt="">
         <p class="desc"> Redmi K50 电竞版</p>
-        <div class="slogn">全线拉满的冷血旗舰 | 500万主摄</div>
+        <div class="slogan">全线拉满的冷血旗舰 | 500万主摄</div>
+        <div class="info">
+            <h4><a href="#">Redmi K50手机...</a></h4>
+            <em>|</em>
+            <span>¥99</span>
+        </div>
         <!-- <div class="testBox"></div> -->
     </div>
 </body>
