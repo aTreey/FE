@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 版心宽度 */
+.w {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+.topBar {
+    height: 42px;
+    background-color: #333;
+}
+
+.topBarNav {
+    background: #333;
+    height: 40px;
+}
+
+.topBarNav a {
+    font-size: 12px;
+    line-height: 40px
+}
+
+
+.header {
+    padding: 20px 0;
+    height: 70px; 
+    background-color: cyan;
+}
+
+.log {
+    float: left;
+    width: 56px;
+    height: 56px;
+    background-color:darkorange;
+}
+.nav {
+    float: left;
+}
+/* 因为li 是块级元素，所以需要加float */
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    padding: 0 15px;
+    line-height: 56px;
+    font-size: 16px;
+    color: #333;
+    /* background: blue; */
+}
+.nav ul li a:hover {
+    color:darkorange
+}
+
+
+
+
