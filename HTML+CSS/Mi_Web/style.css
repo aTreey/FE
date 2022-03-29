@@ -40,7 +40,7 @@ li {
 .header {
     padding: 20px 0;
     height: 70px; 
-    background-color: cyan;
+    /* background-color: cyan; */
 }
 
 .log {
@@ -58,6 +58,7 @@ li {
 }
 
 .nav ul li a {
+    display: block;
     padding: 0 15px;
     line-height: 56px;
     font-size: 16px;
@@ -65,7 +66,35 @@ li {
     /* background: blue; */
 }
 .nav ul li a:hover {
+    border-bottom: 1.5px solid darkorange;
     color:darkorange
+}
+
+.search {
+    float: left;
+    width: 273px;
+    height: 48px;
+    margin-left: 100px;
+    background-color: blue;
+}
+
+.search input {
+    float: left;
+    width: 221px;
+    height: 46px;
+    border: 1px solid rgb(153, 153, 153);
+    border-right: 0;
+    font-size: 14px;
+    color: #bfbfbf;
+    padding-left: 15px;
+    
+}
+
+.search button {
+    float: right;
+    width: 52px;
+    height: 50px;
+    border: 1px solid rgb(153, 153, 153);
 }
 
 
