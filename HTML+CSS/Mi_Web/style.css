@@ -47,7 +47,9 @@ li {
     float: left;
     width: 56px;
     height: 56px;
+    border-radius: 23px;
     background-color:darkorange;
+    /* background:url(../images/logo.png) */
 }
 .nav {
     float: left;
@@ -72,31 +74,42 @@ li {
 
 .search {
     float: left;
-    width: 273px;
+    /* 总宽412px */
+    width: 278px; 
     height: 48px;
     margin-left: 100px;
-    background-color: blue;
+    background-color: cyan;
 }
 
 .search input {
     float: left;
-    width: 221px;
+    /* 需要减去按钮的宽度和 padding-left*/
+    width: 219px;
     height: 46px;
     border: 1px solid rgb(153, 153, 153);
     border-right: 0;
     font-size: 14px;
     color: #bfbfbf;
-    padding-left: 15px;
-    
+
+    /* 会将盒子撑大10px */
+    padding-left: 10px;
 }
 
 .search button {
+    /* 设置float 消除行内块元素间的间隙 */
     float: right;
-    width: 52px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border: 1px solid rgb(153, 153, 153);
+    background-color: darkorange;
+    background: url(../images/service.png);
+    
 }
 
 
-
-
+/* 测试块元素 */
+.test1 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
