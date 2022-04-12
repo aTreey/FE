@@ -1,40 +1,42 @@
-import React, { Component, Fragment } from "react";
-import TestItem from "./TestItem";
-import TransitionAnimation from "./TransitionAnimation";
-import KeyframesAnimation from "./KeyframesAnimation";
+import React, { Component, Fragment } from 'react'
+import TestItem from './TestItem'
+import TransitionAnimation from './TransitionAnimation'
+import KeyframesAnimation from './KeyframesAnimation'
 
-import axios from "axios";
+import axios from 'axios'
 
-import "./style.css";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import './style.css'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import FormDemo from './TestForm'
+import Game from './Game/Game'
 
 class TestComponent extends Component {
   // 初始化阶段
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      inputV: "",
-      list: ["item1", "item2", "item3", "item4"],
-    };
+      inputV: '',
+      list: ['item1', 'item2', 'item3', 'item4']
+    }
 
-    this.addList = this.addList.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
-    this.inputChange = this.inputChange.bind(this);
+    this.addList = this.addList.bind(this)
+    this.deleteItem = this.deleteItem.bind(this)
+    this.inputChange = this.inputChange.bind(this)
   }
 
   // axios 请求可以写在这里
   componentDidMount() {
-    console.log("componentDidMount----");
+    console.log('componentDidMount----')
     axios
-      .get("https://api.github.com/search/repositories?q=React")
+      .get('https://api.github.com/search/repositories?q=React')
       .then((res) => {
-        console.log("res =====" + JSON.string(res));
+        console.log('res =====' + JSON.string(res))
       })
       .catch((err) => {
-        console.log("====================================");
-        console.log("err ----" + JSON.stringify(err));
-        console.log("====================================");
-      });
+        console.log('====================================')
+        console.log('err ----' + JSON.stringify(err))
+        console.log('====================================')
+      })
   }
 
   inputChange() {
@@ -43,24 +45,24 @@ class TestComponent extends Component {
       // inputV: e.target.value,
 
       // 使用ref后可改写成
-      inputV: this.input.value,
-    });
+      inputV: this.input.value
+    })
   }
 
   addList() {
     if (this.state.inputV.length <= 0) {
-      return;
+      return
     }
     this.setState(
       {
         list: [...this.state.list, this.state.inputV],
-        inputV: "",
+        inputV: ''
       },
       () => {
-        const children = this.ul.querySelectorAll("li");
-        console.log("setState 执行完毕---" + children.length);
+        const children = this.ul.querySelectorAll('li')
+        console.log('setState 执行完毕---' + children.length)
       }
-    );
+    )
 
     //  DOM 概念
     // 真实DOM:
@@ -83,47 +85,48 @@ class TestComponent extends Component {
     //  setState 异步执行，根本原因是虚拟DOM
     // ref绑定<ul></ul> 组件，在setState 后执行
 
-    const children = this.ul.querySelectorAll("li");
-    console.log("ref 使用注意事项---" + children.length);
+    const children = this.ul.querySelectorAll('li')
+    console.log('ref 使用注意事项---' + children.length)
   }
 
   deleteItem(idx) {
-    let list = this.state.list;
-    list.splice(idx, 1);
+    let list = this.state.list
+    list.splice(idx, 1)
     this.setState({
-      list: list,
-    });
+      list: list
+    })
   }
 
   componentWillMount() {
-    console.log("componentWillMount----");
+    console.log('componentWillMount----')
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount----");
+    console.log('componentWillUnmount----')
   }
 
   // 组件是否更新
   shouldComponentUpdate() {
-    console.log("shouldComponentUpdate----");
-    return true;
+    console.log('shouldComponentUpdate----')
+    return true
   }
 
   componentWillUpdate() {
     console.log(
-      "componentWillUpdate---组件更新前，shouldComponentUpdate函数之后执行"
-    );
+      'componentWillUpdate---组件更新前，shouldComponentUpdate函数之后执行'
+    )
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate----组件更新之后执行");
+    console.log('componentDidUpdate----组件更新之后执行')
   }
 
   render() {
-    console.log("render----");
+    console.log('render----')
     return (
       <Fragment>
-        <div>
+        <div className="container">
+          <h3>React 基础</h3>
           {/* Action 点击label 获取焦点 */}
           <label htmlFor="Action">加入label</label>
           <input
@@ -131,7 +134,7 @@ class TestComponent extends Component {
             id="Action"
             // -------- 箭头函数绑定DOM元素
             ref={(input) => {
-              this.input = input;
+              this.input = input
             }}
             // ------------------
             value={this.state.inputV}
@@ -139,51 +142,67 @@ class TestComponent extends Component {
           ></input>
 
           <button onClick={this.addList}>增加按钮</button>
+
+          <ul
+            ref={(ul) => {
+              this.ul = ul
+            }}
+          >
+            {/* 使用组动画 */}
+            <TransitionGroup>
+              {this.state.list.map((item, index) => (
+                // <li
+                //   key={index.toString()}
+                //   onClick={this.deleteItem.bind(this, index)}
+                //   // dangerouslySetInnerHTML={{__html:item}}
+                // >
+                //   {item}
+                // </li>
+
+                <CSSTransition
+                  key={index + item}
+                  timeout={1000}
+                  classNames="animation-text"
+                  appear={true}
+                  unmountOnExit
+                >
+                  {/* 组件拆分 */}
+                  <TestItem
+                    key={index.toString()}
+                    prefix={'React base'}
+                    content={item}
+                    suffix={'有默认值的'}
+                    index={index}
+                    // 删除时子组件不能操作数据，只能将删除方法传递给子组件，让其调用
+                    deleteItem={this.deleteItem}
+                    list={this.state.list}
+                  />
+                </CSSTransition>
+              ))}
+            </TransitionGroup>
+          </ul>
+
+          <div>
+            <h3>React 动画</h3>
+            <hr />
+            <TransitionAnimation />
+            <KeyframesAnimation />
+          </div>
+
+          <div>
+            <h3>React input </h3>
+            <hr />
+            <FormDemo />
+          </div>
         </div>
-        <ul
-          ref={(ul) => {
-            this.ul = ul;
-          }}
-        >
-          {/* 使用组动画 */}
-          <TransitionGroup>
-            {this.state.list.map((item, index) => (
-              // <li
-              //   key={index.toString()}
-              //   onClick={this.deleteItem.bind(this, index)}
-              //   // dangerouslySetInnerHTML={{__html:item}}
-              // >
-              //   {item}
-              // </li>
-
-              <CSSTransition
-                key={index + item}
-                timeout={1000}
-                classNames="animation-text"
-                appear={true}
-                unmountOnExit
-              >
-                {/* 组件拆分 */}
-                <TestItem
-                  key={index.toString()}
-                  prefix={"React base"}
-                  content={item}
-                  suffix={"有默认值的"}
-                  index={index}
-                  // 删除时子组件不能操作数据，只能将删除方法传递给子组件，让其调用
-                  deleteItem={this.deleteItem}
-                  list={this.state.list}
-                />
-              </CSSTransition>
-            ))}
-          </TransitionGroup>
-        </ul>
-
-        <TransitionAnimation />
-        <KeyframesAnimation />
+        <div>
+          <h3>小游戏</h3>
+          <Game />
+        </div>
+        ≥
       </Fragment>
-    );
+    )
   }
 }
 
-export default TestComponent;
+export default TestComponent

@@ -1,95 +1,96 @@
 .input {
-    border: 1px solid #ae7000
+  border: 1px solid #ae7000;
 }
 
 .test {
-    color: #E6F1F0;
-    background-color:#F4F5F6
+  color: #e6f1f0;
+  background-color: #f4f5f6;
 }
 
+.container {
+  padding: 0 20px;
+}
 
 /* CSS动画 */
 .show {
-    opacity: 1;
-    transition: all .25s ease-in
+  opacity: 1;
+  transition: all 0.25s ease-in;
 }
 
 .hidden {
-    opacity: 0;
-    transition: all 0.25s ease-in
+  opacity: 0;
+  transition: all 0.25s ease-in;
 }
 
 /* 关键帧动画 */
 .keyframesShow {
-    /* forwards: 停止在最后一帧 */
-    animation: show-item 2s ease-in forwards;
+  /* forwards: 停止在最后一帧 */
+  animation: show-item 2s ease-in forwards;
 }
 
 .keyframesHide {
-    animation: hide-item 2s ease-in forwards;
+  animation: hide-item 2s ease-in forwards;
 }
 
 @keyframes hide-item {
-    0% {
-        opacity: 1;
-        color: blue
-    }
-    
-    50% {
-        opacity: 0.5;
-        color: red
-    }
+  0% {
+    opacity: 1;
+    color: blue;
+  }
 
-    100% {
-        opacity: 0;
-        color: purple
-    }
+  50% {
+    opacity: 0.5;
+    color: red;
+  }
+
+  100% {
+    opacity: 0;
+    color: purple;
+  }
 }
 @keyframes show-item {
-    0% {
-        opacity: 0;
-        color: purple
-    }
-    
-    50% {
-        opacity: 0.5;
-        color: red
-    }
+  0% {
+    opacity: 0;
+    color: purple;
+  }
 
-    100% {
-        opacity: 1;
-        color: darkorange
-    }
+  50% {
+    opacity: 0.5;
+    color: red;
+  }
+
+  100% {
+    opacity: 1;
+    color: darkorange;
+  }
 }
-
 
 /* 动画库的使用 
  * 格式必须是：
  * xxx-enter; xxx-enter-active; xxx-enter-done 
 */
 .animation-text-enter {
-    opacity: 0;
+  opacity: 0;
 }
 
 .animation-text-enter-active {
-    opacity: 1;
-    transition: opacity 2000ms;
+  opacity: 1;
+  transition: opacity 2000ms;
 }
 
 .animation-text-enter-done {
-    opacity: 1;
+  opacity: 1;
 }
 
 .animation-text-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .animation-text-exit-active {
-    opacity: 0;
-    transition: opacity 2000ms;
+  opacity: 0;
+  transition: opacity 2000ms;
 }
 
 .animation-text-exit-done {
-    opacity: 0;
+  opacity: 0;
 }
-

@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 class App extends Component {
   render() {
-    return(
+    return (
       <ul>
         <li>React demo</li>
         <li>React demo2</li>
@@ -12,4 +12,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
