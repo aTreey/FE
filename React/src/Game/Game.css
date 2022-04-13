@@ -1,18 +1,35 @@
-body {
-  /* font: 14px "Century Gothic", Futura, sans-serif; */
-  margin: 20px;
-}
-
-ol ul {
+ol,
+ul {
   padding: left 20px;
-}
-
-.board-row {
-  clear: both;
-  content: '';
-  display: table;
 }
 
 .status {
   margin-bottom: 10px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+  background-color: aliceblue;
+}
+
+.square {
+  /* 设置float 消除行内块元素间的间隙 */
+  float: left;
+  background: bisque;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+.square:focus {
+  outline: none;
 }

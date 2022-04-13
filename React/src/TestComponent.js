@@ -194,12 +194,11 @@ class TestComponent extends Component {
             <hr />
             <FormDemo />
           </div>
+          <div>
+            <h3>井字棋小游戏</h3>
+            <Game />
+          </div>
         </div>
-        <div>
-          <h3>小游戏</h3>
-          <Game />
-        </div>
-        ≥
       </Fragment>
     )
   }
