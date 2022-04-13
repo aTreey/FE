@@ -5,7 +5,7 @@ import '../style.css';
 // TODO: 只有props和render 方法，不包含state 可以简化为函数组件
 
 /*
-class Square1 extends PureComponent {
+class Square extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,20 +29,9 @@ class Square1 extends PureComponent {
 }
 */
 
-function Square(props) {
-  const { value, onClick } = props;
-  return (
-    <button className="square" onClick={onClick}>
-      {value}
-    </button>
-  );
-}
-
 // TODO: 替换为函数组件
+/*
 class Board extends PureComponent {
-  // TODO: 状态提升到Game组件中
-
-  /*
   constructor(props) {
     super(props);
     this.state = {
@@ -66,7 +55,6 @@ class Board extends PureComponent {
       xIsNext: !this.state.xIsNext
     });
   }
-  */
 
   renderSquare(i) {
     return (
@@ -111,23 +99,71 @@ class Board extends PureComponent {
     );
   }
 }
+*/
+
+// 最终代码
+function Square(props) {
+  const { value, onClick } = props;
+  return (
+    <button className="square" onClick={onClick}>
+      {value}
+    </button>
+  );
+}
+
+function Board(props) {
+  const { squares, onClick } = props;
+
+  function renderSquare(i) {
+    return (
+      <Square
+        value={squares[i]}
+        onClick={() => {
+          onClick(i);
+        }}
+      />
+    );
+  }
+
+  return (
+    <div>
+      <div className="board-row">
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+      </div>
+      <div className="board-row">
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div className="board-row">
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+}
 
 export default class Game extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      // TODO: 想要在Game组件展示一个历史步骤列表，所以把history 这个state放在顶层Game组件中；
-      // 把 state 提升到顶层Game 组件里，1. 有了对Board 组件数据的完全控制权；2. 可以让Game 组件控制Board 组件，并根据history渲染 历史步骤
+      // TODO:  state 提升到顶层Game 组件里；
+      // 1. 有了对Board 组件数据的完全控制权；2. 可以让Game 组件控制Board 组件，并根据history渲染 历史步骤
       history: [{ squares: Array(9).fill(null) }],
+      stepNumber: 0,
       xIsNext: true
     };
   }
 
   handleClick(i) {
     console.log('Game handleClick=-----');
-    const history = this.state.history;
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
+
     // 有胜出或者已被填充的不做处理
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -135,19 +171,44 @@ export default class Game extends PureComponent {
     squares[i] = this.state.xIsNext ? 'X' : 'O';
 
     /*
-    concat() 方法可能与push()不太一样，它并不会改变原数组，所以我们推荐使用 concat()。
+    concat() 方法可能与push()不一样，它并不会改变原数组，所以我们推荐使用 concat()。
     */
     this.setState({
       history: history.concat([{ squares: squares }]),
+      // 记录步骤
+      stepNumber: history.length,
       xIsNext: !this.state.xIsNext
+    });
+  }
+
+  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      xIsNext: step % 2 === 0
     });
   }
 
   render() {
     const history = this.state.history;
     // 使用最新一次历史记录来确定并展示当前状态
-    const current = history[history.length - 1];
+    const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
+
+    const moves = history.map((step, move) => {
+      const desc = move ? 'Go to move #' + move : 'Go to game start';
+      return (
+        <li key={move}>
+          <button
+            onClick={() => {
+              this.jumpTo(move);
+            }}
+          >
+            {desc}
+          </button>
+        </li>
+      );
+    });
+
     let status;
     if (winner) {
       status = `Game Winner: ${winner}`;
@@ -159,7 +220,6 @@ export default class Game extends PureComponent {
         <div div className="game-board">
           <Board
             squares={current.squares}
-            xIsNext={true}
             onClick={(i) => {
               this.handleClick(i);
             }}
@@ -167,7 +227,7 @@ export default class Game extends PureComponent {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{'TODO:'}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );
@@ -175,7 +235,6 @@ export default class Game extends PureComponent {
 }
 
 function calculateWinner(squares) {
-  console.log('squares ----' + squares);
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
