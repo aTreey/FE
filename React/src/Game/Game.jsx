@@ -38,7 +38,11 @@ function Square(props) {
   );
 }
 
+// TODO: 替换为函数组件
 class Board extends PureComponent {
+  // TODO: 状态提升到Game组件中
+
+  /*
   constructor(props) {
     super(props);
     this.state = {
@@ -48,14 +52,12 @@ class Board extends PureComponent {
     };
   }
 
-  handleClick = (i) => {
-    console.log('handleClick=-----');
+  // TODO: 数据修改提升到Game 中
+  handleClick(i) {
+    console.log('Square onClick-----');
     const squares = this.state.squares.slice();
-
     // 有胜出或者已被填充的不做处理
     if (calculateWinner(squares) || squares[i]) {
-      console.log('winner ---' + calculateWinner(squares));
-      console.log('squares[i] -----' + squares[i]);
       return;
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
@@ -63,26 +65,28 @@ class Board extends PureComponent {
       squares: squares,
       xIsNext: !this.state.xIsNext
     });
-  };
+  }
+  */
 
   renderSquare(i) {
     return (
       <Square
-        value={this.state.squares[i]}
+        value={this.props.squares[i]}
         onClick={() => {
-          this.handleClick(i);
+          this.props.onClick(i);
         }}
       />
     );
   }
 
   render() {
-    const winner = calculateWinner(this.state.squares);
+    const winner = calculateWinner(this.props.squares);
+    console.log('winner ---' + winner);
     let status;
     if (winner) {
       status = `Winner: ${winner}`;
     } else {
-      status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
+      status = `Next player: ${this.props.xIsNext ? 'X' : 'O'}`;
     }
 
     return (
@@ -109,15 +113,60 @@ class Board extends PureComponent {
 }
 
 export default class Game extends PureComponent {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      // TODO: 想要在Game组件展示一个历史步骤列表，所以把history 这个state放在顶层Game组件中；
+      // 把 state 提升到顶层Game 组件里，1. 有了对Board 组件数据的完全控制权；2. 可以让Game 组件控制Board 组件，并根据history渲染 历史步骤
+      history: [{ squares: Array(9).fill(null) }],
+      xIsNext: true
+    };
+  }
+
+  handleClick(i) {
+    console.log('Game handleClick=-----');
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    // 有胜出或者已被填充的不做处理
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+
+    /*
+    concat() 方法可能与push()不太一样，它并不会改变原数组，所以我们推荐使用 concat()。
+    */
+    this.setState({
+      history: history.concat([{ squares: squares }]),
+      xIsNext: !this.state.xIsNext
+    });
+  }
+
   render() {
+    const history = this.state.history;
+    // 使用最新一次历史记录来确定并展示当前状态
+    const current = history[history.length - 1];
+    const winner = calculateWinner(current.squares);
+    let status;
+    if (winner) {
+      status = `Game Winner: ${winner}`;
+    } else {
+      status = `Game Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
+    }
     return (
       <div className="game">
         <div div className="game-board">
-          <Board></Board>
+          <Board
+            squares={current.squares}
+            xIsNext={true}
+            onClick={(i) => {
+              this.handleClick(i);
+            }}
+          ></Board>
         </div>
         <div className="game-info">
-          <div>{'status'}</div>
+          <div>{status}</div>
           <ol>{'TODO:'}</ol>
         </div>
       </div>
