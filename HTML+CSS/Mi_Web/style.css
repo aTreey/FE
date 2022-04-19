@@ -1,115 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* 版心宽度 */
 .w {
-    width: 1226px;
-    margin: 0 auto;
+  width: 1226px;
+  margin: 0 auto;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-
-
-
 .topBar {
-    height: 42px;
-    background-color: #333;
+  height: 42px;
+  background-color: #333;
 }
 
 .topBarNav {
-    background: #333;
-    height: 40px;
+  background: #333;
+  height: 40px;
 }
 
 .topBarNav a {
-    font-size: 12px;
-    line-height: 40px
+  font-size: 12px;
+  line-height: 40px;
 }
 
-
 .header {
-    padding: 20px 0;
-    height: 70px; 
-    /* background-color: cyan; */
+  padding: 20px 0;
+  height: 70px;
+  /* background-color: cyan; */
 }
 
 .log {
-    float: left;
-    width: 56px;
-    height: 56px;
-    border-radius: 23px;
-    background-color:darkorange;
-    /* background:url(../images/logo.png) */
+  float: left;
+  width: 56px;
+  height: 56px;
+  border-radius: 23px;
+  background-color: darkorange;
+  /* background:url(../images/logo.png) */
 }
 .nav {
-    float: left;
+  float: left;
 }
 /* 因为li 是块级元素，所以需要加float */
 .nav ul li {
-    float: left;
+  float: left;
 }
 
 .nav ul li a {
-    display: block;
-    padding: 0 15px;
-    line-height: 56px;
-    font-size: 16px;
-    color: #333;
-    /* background: blue; */
+  display: block;
+  padding: 0 15px;
+  line-height: 56px;
+  font-size: 16px;
+  color: #333;
+  /* background: blue; */
 }
 .nav ul li a:hover {
-    border-bottom: 1.5px solid darkorange;
-    color:darkorange
+  border-bottom: 1.5px solid darkorange;
+  color: darkorange;
 }
 
 .search {
-    float: left;
-    /* 总宽412px */
-    width: 278px; 
-    height: 48px;
-    margin-left: 100px;
-    background-color: cyan;
+  float: left;
+  /* 总宽412px */
+  width: 278px;
+  height: 48px;
+  margin-left: 50px;
+  background-color: cyan;
 }
 
 .search input {
-    float: left;
-    /* 需要减去按钮的宽度和 padding-left*/
-    width: 219px;
-    height: 46px;
-    border: 1px solid rgb(153, 153, 153);
-    border-right: 0;
-    font-size: 14px;
-    color: #bfbfbf;
+  float: left;
+  /* 需要减去按钮的宽度和 padding-left*/
+  width: 219px;
+  height: 46px;
+  border: 1px solid rgb(153, 153, 153);
+  border-right: 0;
+  font-size: 14px;
+  color: #bfbfbf;
 
-    /* 会将盒子撑大10px */
-    padding-left: 10px;
+  /* 会将盒子撑大10px */
+  padding-left: 10px;
 }
 
 .search button {
-    /* 设置float 消除行内块元素间的间隙 */
-    float: right;
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgb(153, 153, 153);
-    background-color: darkorange;
-    background: url(../images/service.png);
-    
+  /* 设置float 消除行内块元素间的间隙 */
+  float: right;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgb(153, 153, 153);
+  background-color: darkorange;
+  background: url(../images/service.png);
 }
 
+.user {
+  float: right;
+  line-height: 48px;
+  font-size: 14px;
+  color: #666;
+}
+
+.banner {
+  height: 460px;
+  background: orange;
+}
+
+.banner .w {
+  height: 460px;
+  /* top： 垂直靠上，center：水平剧中 */
+  background: url("../images/bannerBg.jpeg") no-repeat top center/100%;
+}
+
+.subnav {
+  width: 234px;
+  height: 460px;
+  background: rgba(105, 101, 101, 0.65);
+}
+
+.subnav ul {
+  padding: 20px 0;
+}
+
+/* a 是行内元素没有高度，所以需要li 制定高度*/
+.subnav ul li {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 20px 0 30px;
+}
+
+.subnav ul li:hover {
+  background-color: darkorange;
+}
+
+.subnav ul li a {
+  font-size: 14px;
+  color: white;
+}
+
+.subnav ul li span {
+  float: right;
+}
 
 /* 测试块元素 */
 .test1 {
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
 }

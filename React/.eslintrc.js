@@ -16,9 +16,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
-    'react/self-closing-comp': ['error']
+    'react/self-closing-comp': ['error'],
+    'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
+    'react-hooks/exhaustive-deps': 'warn' // 检查 effect 的依赖
   }
 };
 
