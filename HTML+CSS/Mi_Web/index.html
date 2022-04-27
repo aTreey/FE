@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2022-03-22 19:16:26
- * @LastEditTime: 2022-04-19 23:53:40
+ * @LastEditTime: 2022-04-27 22:28:29
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /FE/HTML+CSS/Mi_Web/index.html
@@ -20,7 +20,7 @@
 <body>
 
     <div class="topBar">
-        <div class="topBarNav">
+        <div class="topBarNav w">
             <a href="#">小米商城</a>
             <a href="#">MiUI</a>
             <a href="#">IoT</a>
@@ -30,68 +30,226 @@
         </div>
     </div>
 
-    <!-- 头部区域 -->
-    <div class="header w">
-        <!-- log部分 -->
-        <div class="log"></div>
-        <!-- 导航栏实现 li+a ，便于seo -->
-        <div class="nav">
-            <ul>
-                <li><a href="">Xiaomi手机</a></li>
-                <li><a href="">Redmi 红米</a></li>
-                <li><a href="">电视</a></li>
-                <li><a href="">手机</a></li>
-                <li><a href="">笔记本</a></li>
-                <li><a href="">平板</a></li>
-                <li><a href="">家电</a></li>
-                <li><a href="">路由器</a></li>
-                <li><a href="">社区</a></li>
+    <div class="header-wrapper">
+        <!-- 头部区域 -->
+        <div class="header w">
+            <!-- log部分 -->
+            <div class="log"></div>
+            <!-- 导航栏实现 li+a ，便于seo -->
+            <div class="nav">
+                <ul>
+                    <li><a href="">Xiaomi手机</a></li>
+                    <li><a href="">Redmi 红米</a></li>
+                    <li><a href="">电视</a></li>
+                    <li><a href="">手机</a></li>
+                    <li><a href="">笔记本</a></li>
+                    <li><a href="">平板</a></li>
+                    <li><a href="">家电</a></li>
+                    <li><a href="">路由器</a></li>
+                    <li><a href="">社区</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" value="输入关键词">
+                <button></button>
+            </div>
+            <!-- 用户模块 -->
+            <div class="user">
+                <img src="../images/user.png" alt="">
+                用户名
+            </div>
+        </div>
+
+        <!-- banner Start-->
+        <li class="banner">
+            <!-- 版芯内容 -->
+            <div class="banner-nav w">
+                <div class="subnav">
+                    <ul>
+                        <li><a href="">
+                                手机
+                                <span>&gt;</span>
+                            </a></li>
+                        <li><a href="">
+                                电视
+                                <span>&gt;</span>
+                            </a></li>
+                        <li><a href="">笔记本 平板
+                                <span>&gt;</span>
+                            </a></li>
+                        <li><a href="">家电<span>&gt;</span></a></li>
+                        <li><a href="">出行 穿戴<span>&gt;</span></a></li>
+                        <li><a href="">智能 路由器<span>&gt;</span></a></li>
+                        <li><a href="">电源 配件<span>&gt;</span></a></li>
+                        <li><a href="">健康 儿童<span>&gt;</span></a></li>
+                        <li><a href="">耳机 音响<span>&gt;</span></a></li>
+                        <li><a href="">生活 箱包<span>&gt;</span></a></li>
+                </div>
+                <div class="notice">
+                    <h3>重要通知</h3>
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <h4>手机电脑火爆抢购中</h4>
+                                <p>剩余不足100件</p>
+                            </li>
+                            <li>
+                                <h4>手机电脑火爆抢购中</h4>
+                                <p>剩余不足100件</p>
+                            </li>
+                            <li>
+                                <h4>手机电脑火爆抢购中</h4>
+                                <p>剩余不足100件</p>
+                            </li>
+                        </ul>
+                        <a href="" class="activity">全部活动</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F通道 -->
+            <!-- <div class="banner-sub-row w">
+            <ul class="channel-list-quick">
+                <li>
+                    <a>
+                        <img src="../images/FF.png">
+                        保障服务
+                    </a>
+                    </liv>
+                <li>企业团购</liv>
+                <li>F码通道</li>
+                <li>米粉卡</li>
+                <li>以旧换新</li>
+                <li>花费充值</li>
             </ul>
-        </div>
-        <div class="search">
-            <input type="text" value="输入关键词">
-            <button></button>
-        </div>
-        <!-- 用户模块 -->
-        <div class="user">
-            <img src="../images/user.png" alt="">
-            用户名
-        </div>
+            <ul class="channel-hero">
+                <li>
+                    <a href="">
+                        <img src="../images/redmik50.jpeg">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/redmik50.jpeg">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/redmik50.jpeg">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/redmik50.jpeg">
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+    </div>
     </div>
 
-    <!-- banner Start-->
-    <div class="banner">
-        <!-- 版芯内容 -->
-        <div class="w">
-            <div class="subnav">
-                <ul>
+    <!-- 手机、电脑、家电等主要内容 -->
+    <div class="main-box">
+        <div class="main-box-rd w">
+            <a href="#">
+                <img alt=" " height="120" src="../images/k50.webp">
+            </a>
+        </div>
+
+        <div class="main-box-row w">
+            <div class="main-box-hd">
+                <h2 class="title">
+                    手机
+                </h2>
+                <div class="more">
+                    <a href="#">
+                        查看更多
+                        <img alt=" " width="20" height="20" src="../images/service.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="main-box-bd">
+                <!-- <ul>
                     <li><a href="">
-                            手机
-                            <span>&gt;</span>
+                            <img src="" alt="">
                         </a></li>
-                    <li><a href="">
-                            电视
-                            <span>&gt;</span>
-                        </a></li>
-                    <li><a href="">笔记本 平板
-                            <span>&gt;</span>
-                        </a></li>
-                    <li><a href="">家电<span>&gt;</span></a></li>
-                    <li><a href="">出行 穿戴<span>&gt;</span></a></li>
-                    <li><a href="">智能 路由器<span>&gt;</span></a></li>
-                    <li><a href="">电源 配件<span>&gt;</span></a></li>
-                    <li><a href="">健康 儿童<span>&gt;</span></a></li>
-                    <li><a href="">耳机 音响<span>&gt;</span></a></li>
-                    <li><a href="">生活 箱包<span>&gt;</span></a></li>
-                </ul><span>&gt;</span>
+                </ul> -->
+
+                <div class="bd-list">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div>
+                                    <img src="../images/phone.webp" alt="#">
+                                </div>
+                                <h3 class="title">
+                                    Redmi K50 电竞版
+                                </h3>
+                                <p class="desc">原生美肌人像｜奇迹阳光动人新色｜骁龙778G Plus</p>
+                                <p class="price">3299起</p>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/phone.webp" alt="#">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- banner End -->
 
 
-    <div class=" test1">块1
+    <div class="foot-service w">
+        <h4>使用ul+li+a 浮动</h4>
+        <ul>
+            <li><a href=""><img src="" alt="">预约维修服务</a></li>
+            <li><a href=""><img src="" alt="">7天无理由退货</a></li>
+            <li><a href=""><img src="" alt="">15天免费换货</a></li>
+            <li><a href=""><img src="" alt="">满69元包邮</a></li>
+            <li><a href=""><img src="" alt="">520余家售后网点</a></li>
+        </ul>
+        <a href="#" class="footBar-service">咨询服务</a>
     </div>
+
+
+    <!-- <div class="test2">哈哈哈</div>
+        <div class="test3">测试</div> -->
+    <div class=" test1">块1</div>
     <div class="test1">块2</div>
     <div class="test1">块3</div>
 </body>

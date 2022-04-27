@@ -73,23 +73,35 @@
             text-align: center;
         }
 
+        .brother {
+            background-color: cyan;
+            /* margin-bottom: 10px; */
+        }
+
+        .brother1 {
+            height: 100px;
+            background-color: green;
+            margin-top: 20px;
+            margin-top: 30px;
+        }
+
         /* 块元素塌陷，子父都有margin */
         .demoFather {
-            width: 100px;
-            height: 100px;
+            width: 300px;
+            height: 300px;
             background-color: pink;
-            margin-top: 40px;
+            /* margin-top: 10px; */
 
             /* 会导致盒子变大 */
             /* border-top: 1px solid red; */
             /* padding-top: 0.5px; */
 
-            overflow: hidden
+            /* overflow: hidden */
         }
 
         .demoSon {
-            width: 30px;
-            height: 30px;
+            width: 200px;
+            height: 100px;
             background-color: cyan;
             margin-top: 20px;
         }
@@ -245,9 +257,27 @@
     </div>
 
     <hr>
-    <div class="demoFather">
-        <div class="demoSon"></div>
+    <div>
+        1. 相邻块元素垂直外边距合并, 两个之间的间距不是 margin-bottom + margin-top 之和,而是取最大
+        2. 解决方法：尽量使用一个margin值
+        <div class="brother">
+            brother: margin-bottom: 10px;
+        </div>
+        <div class="brother1">
+            brother1: margin-top: 10px;
+        </div>
     </div>
+
+    <div>
+        嵌套块元素垂直外边距塌陷
+        <div class="demoFather">
+            <!-- 父子元素都设置了margin，会有塌陷情况 -->
+            <div class="demoSon">
+                <!-- 子元素设置了margin-top -->
+            </div>
+        </div>
+    </div>
+
 
     <div class="page">
         <div class="page-header-wrapper">

@@ -5,7 +5,6 @@
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 /* 版心宽度 */
@@ -31,6 +30,8 @@ li {
 .topBarNav a {
   font-size: 12px;
   line-height: 40px;
+  padding-right: 15px;
+  color: #fff;
 }
 
 .header {
@@ -44,7 +45,7 @@ li {
   width: 56px;
   height: 56px;
   border-radius: 23px;
-  background-color: darkorange;
+  background-color: #ff6700;
   /* background:url(../images/logo.png) */
 }
 .nav {
@@ -64,8 +65,9 @@ li {
   /* background: blue; */
 }
 .nav ul li a:hover {
-  border-bottom: 1.5px solid darkorange;
-  color: darkorange;
+  /* 实现下划线样式 */
+  border-bottom: 1.5px solid #ff6700;
+  color: #ff6700;
 }
 
 .search {
@@ -97,7 +99,7 @@ li {
   width: 48px;
   height: 48px;
   border: 1px solid rgb(153, 153, 153);
-  background-color: darkorange;
+  background-color: #ff6700;
   background: url(../images/service.png);
 }
 
@@ -110,16 +112,17 @@ li {
 
 .banner {
   height: 460px;
-  background: orange;
+  /* background: orange; */
 }
 
-.banner .w {
+.banner-nav {
   height: 460px;
   /* top： 垂直靠上，center：水平剧中 */
   background: url("../images/bannerBg.jpeg") no-repeat top center/100%;
 }
 
 .subnav {
+  float: left;
   width: 234px;
   height: 460px;
   background: rgba(105, 101, 101, 0.65);
@@ -136,8 +139,12 @@ li {
   padding: 0 20px 0 30px;
 }
 
+/* .subnav-category-item-active {
+  background: #ff6700;
+} */
+
 .subnav ul li:hover {
-  background-color: darkorange;
+  background-color: #ff6700;
 }
 
 .subnav ul li a {
@@ -149,9 +156,283 @@ li {
   float: right;
 }
 
+.notice {
+  /* 一个浮动都需要浮动，所以subNav也需要浮动 */
+  float: right;
+  /* width: 200px; */
+  height: 300px;
+  background: white;
+  /* 浮动盒子不会外边距合并问题 */
+  margin-top: 40px;
+}
+
+.notice h3 {
+  text-align: center;
+  line-height: 40px;
+  background: #bfbfbf;
+}
+
+.notice ul h3 {
+  /* text-align: center; */
+  line-height: 40px;
+}
+
+.bd {
+  /* background: cyan; */
+  padding: 0 20px;
+}
+
+.bd ul li {
+  padding: 14px 0;
+  /* 设置border 会使盒子变大1px */
+  border-bottom: 1px solid #ccc;
+}
+
+.bd ul li h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #4e4e4e;
+}
+
+.bd ul li p {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+.bd .activity {
+  /* a 是行内元素没有大小，需要转化为块元素 */
+  display: block;
+  height: 38px;
+  font-size: 12px;
+  color: #ff6700;
+  border: 1px solid #ff6700;
+  /* 水平居中 */
+  text-align: center;
+  /* 垂直居中 */
+  line-height: 38px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.banner-sub-row {
+  height: 170px;
+  background: #666;
+  margin-top: 14px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.channel-list-quick {
+  float: left;
+  background: #5f5750;
+  height: 170px;
+  width: 236px;
+  padding: 3px 3px;
+}
+
+.channel-list-quick li {
+  float: left;
+  width: 70x;
+  height: 82px;
+  padding: 0 3px;
+  background: blue;
+  border: 1px solid white;
+}
+
+.channel-list-quick a {
+  padding-top: 18px;
+  width: 70px;
+  height: 82px;
+  background: cyan;
+}
+
+.channel-list-quick .item {
+  float: left;
+  background: #5f5750;
+}
+
+.channel-hero {
+  float: left;
+  background: cyan;
+  width: 300px;
+  height: 170px;
+}
+
+.channel-hero > img {
+  width: 300px;
+  line-height: 170px;
+}
+
+/* 底部 */
+.foot-service {
+  /* 行高 */
+  height: 80px;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  /* 内容高度 */
+  line-height: 80px;
+}
+.foot-service h4 {
+  float: left;
+  padding-left: 30px;
+  /* background: yellow; */
+}
+
+.foot-service ul {
+  float: left;
+  padding-left: 30px;
+}
+
+.foot-service li {
+  float: left;
+}
+
+.foot-service ul a {
+  color: #616161;
+  padding: 0 30px;
+  font-size: 16px;
+  border-left: 1px solid #ccc;
+}
+
+.foot-service ul a:hover {
+  color: #ff6700;
+}
+
+.footBar-service {
+  float: right;
+  padding-right: 30px;
+  color: darkorange;
+}
+
+a:hover {
+  color: #ff6700;
+}
+
+.header-wrapper {
+  background: #fff;
+  padding-bottom: 26px;
+}
+
+/* 主要内容 */
+.main-box {
+  background: #f5f5f5;
+  overflow: hidden;
+  padding-bottom: 26px;
+}
+
+.main-box-rd {
+  background: cyan;
+  /* **** <img> 标签会导致父容器<div>高度会多出3个像素.
+  TODO: 解决办法？
+  */
+  height: 120px;
+  margin: 26px auto;
+}
+
+.main-box-row {
+  background: #f5f5f5;
+}
+
+.main-box-hd {
+  height: 58px;
+}
+
+.title {
+  float: left;
+  line-height: 58px;
+  font-size: 22px;
+  font-weight: 200;
+  color: #333;
+}
+.more {
+  float: right;
+  height: 58px;
+  /* background: pink; */
+}
+
+.more a {
+  line-height: 58px;
+  color: #424242;
+}
+
+.more img {
+  vertical-align: text-top;
+}
+
+.main-box-bd {
+  background: #424242;
+}
+
+/* 每行排列4个，可以让width足够大，包含最右端外边距 */
+.bd-list {
+  background: blue;
+}
+
+.bd-list ul li {
+  float: left;
+  /* 234px */
+  width: 234px;
+  height: 300px;
+  padding: 20px 0;
+  margin: 0 10px 10px 0;
+  background: white;
+  text-align: center;
+}
+
+.bd-list ul li img {
+  width: 160px;
+  height: 160px;
+}
+
+.bd-list ul li a {
+  color: #333;
+}
+
+.bd-list .title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  width: 100%;
+  /* background: pink; */
+}
+
+.bd-list .desc {
+  /* height: 18px; */
+  font-size: 12px;
+  color: #b0b0b0;
+  margin: 0 10px 10px;
+  /* background: cyan; */
+}
+
+.bd-list .price {
+  margin: 0 10px 14px;
+  text-align: center;
+  color: #ff6700;
+}
+
+/* h3 {
+  display: block;
+} */
+
+/* 卡片中文字公共样式 */
+.bd-list .title,
+.bd-list .desc {
+  text-align: center;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+}
+
+.bd-list .test2 {
+  /* float: left; */
+  background-color: purple;
+}
+.test3 {
+  /* float: left; */
+  background-color: beige;
+}
+
 /* 测试块元素 */
 .test1 {
   width: 100px;
   height: 100px;
-  background-color: yellow;
+  background-color: pink;
 }
