@@ -222,6 +222,7 @@ li {
 .banner-sub {
   height: 170px;
   /* background: #888; */
+  width: 100%;
   margin-top: 14px;
 }
 
@@ -301,6 +302,10 @@ li {
 /* 中间区域 */
 /***********/
 
+.container {
+  /* width: 1226px; */
+  margin: 0 auto;
+}
 .main-box {
   background: #f5f5f5;
   overflow: hidden;
@@ -310,7 +315,8 @@ li {
 .main-box-rd {
   background: cyan;
   /* **** <img> 标签会导致父容器<div>高度会多出3个像素.
-  TODO: 解决办法？
+  TODO: 解决办法？ 
+  （设置为块元素）
   */
   height: 120px;
   margin: 26px auto;
@@ -318,10 +324,30 @@ li {
 
 .main-box-row {
   background: #f5f5f5;
+  margin-bottom: 16px;
 }
 
+/* 每组标题盒子 */
 .main-box-hd {
   height: 58px;
+  /* background: pink; */
+}
+
+.main-box .main-box-hd .more .tab-list {
+  margin: 0;
+  padding: 16px 0 0;
+  font-size: 16px;
+}
+.main-box .main-box-hd .more .tab-list li {
+  float: left;
+  margin: 0 0 0 30px;
+  color: #424242;
+}
+
+.main-box .main-box-row .main-box-hd .more .tab-list li.tab-active,
+.main-box .main-box-row .main-box-hd .more .tab-list li:hover {
+  color: #ff6700;
+  border-bottom: 1px solid #ff6700;
 }
 
 .title {
@@ -347,18 +373,19 @@ li {
 
 .main-box-bd {
   height: 614px;
-  margin: 0 -14px;
+  margin: 0 -14px 0;
+  /* background: cyan; */
 }
 
 .bd-list-hd {
   float: left;
   width: 234px;
   margin-left: 14px;
-  background: #fff;
 }
 .bd-list-hd img {
   display: block;
   width: 100%;
+  background: white;
 }
 
 /* 每行排列4个，可以让width足够大，包含最右端外边距 */
@@ -366,7 +393,20 @@ li {
   float: left;
   height: 614px;
   width: 992px;
-  margin-left: 14px;
+}
+
+.bd-list-item {
+  width: 234px;
+  height: 300px;
+  margin-bottom: 14px;
+  /* background: #fff; */
+}
+
+/* 更多不规则模块 */
+.bd-list-item-s {
+  height: 93px;
+  background: cyan;
+  margin-bottom: 14px;
 }
 
 .bd-list ul li {
@@ -375,7 +415,7 @@ li {
   height: 300px;
   margin-left: 14px;
   margin-bottom: 14px;
-  background: white;
+  background-color: white;
   text-align: center;
 }
 
@@ -487,7 +527,7 @@ a:hover {
 
 /* 测试块元素 */
 .test1 {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   background-color: pink;
 }
