@@ -15,14 +15,31 @@ p {
   display: block;
 }
 
+li {
+  list-style: none;
+}
+
+/************/
+/* 清除浮动方法0 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/************/
+
 /* 版心宽度 */
 .w {
   width: 1226px;
   margin: 0 auto;
-}
-
-li {
-  list-style: none;
 }
 
 .topBar {
@@ -315,8 +332,12 @@ li {
   margin: 0 auto;
 }
 .main-box {
+  /* ********** */
+  /* 清除浮动方法1 */
+  /* overflow: hidden; */
+  /* ********** */
+
   background: #f5f5f5;
-  overflow: hidden;
   padding-bottom: 26px;
 }
 
@@ -338,7 +359,7 @@ li {
 /* 每组标题盒子 */
 .main-box-hd {
   height: 58px;
-  /* background: pink; */
+  background: pink;
 }
 
 .main-box .main-box-hd .more .tab-list {
@@ -380,9 +401,9 @@ li {
 }
 
 .main-box-bd {
-  height: 614px;
+  /* height: 614px; */
   margin: 0 -14px 0;
-  /* background: cyan; */
+  background: cyan;
 }
 
 .bd-list-hd {
@@ -466,12 +487,11 @@ li {
 }
 
 .video-box {
-  height: 357px;
-  /* background: cyan; */
+  background: transparent;
 }
 
 .video-list {
-  height: 285px;
+  background: transparent;
 }
 
 .video-box .video-item {
@@ -516,36 +536,42 @@ li {
 /***********/
 /*    底部  */
 /***********/
-.foot-service {
+
+.footer {
+  background: cyan;
+}
+
+.footer-service {
   /* 行高 */
   height: 80px;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+  /* box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1); */
   /* 内容高度 */
   line-height: 80px;
 }
-.foot-service h4 {
+.footer-service h4 {
   float: left;
   padding-left: 30px;
   /* background: yellow; */
 }
 
-.foot-service ul {
+.footer-service ul {
   float: left;
   padding-left: 30px;
 }
 
-.foot-service li {
+.footer-service li {
   float: left;
 }
 
-.foot-service ul a {
+.footer-service ul a {
   color: #616161;
   padding: 0 30px;
   font-size: 16px;
   border-left: 1px solid #ccc;
 }
 
-.foot-service ul a:hover {
+.footer-service ul a:hover {
   color: #ff6700;
 }
 
