@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2022-03-22 19:16:26
- * @LastEditTime: 2022-05-09 23:14:23
+ * @LastEditTime: 2022-05-11 21:05:22
  * @LastEditors: 于鸿鹏 
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /FE/HTML+CSS/Mi_Web/index.html
@@ -38,7 +38,7 @@
     <!--------------->
     <div class="header-wrapper">
         <!-- 头部区域 -->
-        <div class="header w">
+        <div class="header w clearfix">
             <!-- log部分 -->
             <div class="log"></div>
             <!-- 导航栏实现 li+a ，便于seo -->
@@ -61,8 +61,9 @@
             </div>
             <!-- 用户模块 -->
             <div class="user">
-                <img src="../images/user.png" alt="">
-                用户名
+                <a href="">
+                    <img src="../images/user.png" alt="">
+                    用户名
             </div>
         </div>
     </div>
@@ -754,7 +755,7 @@
     <!---------------->
     <!-- footer ------>
     <!---------------->
-    <div class="footer">
+    <div class="container">
         <div class="footer-service w">
             <h4>使用ul+li+a 浮动</h4>
             <ul>
@@ -767,8 +768,128 @@
             <a href="#" class="footBar-service">咨询服务</a>
         </div>
 
-        <div class="footer"></div>
+        <div class="footer w">
+            <div class="footer-link clearfix">
+                <div class="links">
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/account/Account%20registration/"
+                                target="_blank">账户管理</a></dd>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/buy/SalesTime/" target="_blank">购物指南</a></dd>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/order/sendprogress/" target="_blank">订单操作</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>服务支持</dt>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/exchange" target="_blank">售后政策</a></dd>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/" target="_blank">自助服务</a></dd>
+                        <dd><a rel="nofollow" href="//www.mi.com/service/download/" target="_blank">相关下载</a></dd>
+                    </dl>
 
+                    <dl>
+                        <dt>线下门店</dt>
+                        <dd><a href="">小米之家</a></dd>
+                        <dd><a href="">服务网点</a></dd>
+                        <dd><a href="">授权体验店/专区</a></dd>
+
+                    </dl>
+
+                    <dl>
+                        <dt>关于小米</dt>
+                        <dd><a href="">了解小米</a></dd>
+                        <dd><a href="">加入小米</a></dd>
+                        <dd><a href="">投资者关系</a></dd>
+                        <dd><a href="">企业社会责任</a></dd>
+                        <dd><a href="">廉洁举报</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd><a href="">新浪微博</a></dd>
+                        <dd><a href="">官方微信</a></dd>
+                        <dd><a href="">联系我们</a></dd>
+                        <dd><a href="">公益基金会</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>特色服务</dt>
+                        <dd><a href="">F 码通道</a></dd>
+                        <dd><a href="">礼物码</a></dd>
+                        <dd><a href="">防伪查询</a></dd>
+                    </dl>
+
+                </div>
+                <div class="contact">
+                    <p class="phone">400-100-5678</p>
+                    <p>8:00-18:00（仅收市话费）</p>
+                    <a href="" class="btn btn-line-primary btn-small">人工服务</a>
+                    <div class="follow">关注小米:
+                        <a href=""><img src="../images/wb.png" alt=""></a>
+                        <a href=""><img src="../images/wx.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <!-- 版权 -->
+        <!--  -->
+        <div class="site-info">
+            <div class="w clearfix">
+                <div class="logo"><img src="../images/logo.png" alt=""></div>
+                <div class="info-text">
+                    <p>
+                        <a href="//www.mi.com/index.html">小米商城</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//www.mi.com/index.html" target="_blank">小米商城</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//www.miui.com/" target="_blank">MIUI</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//home.mi.com/index.html" target="_blank">米家</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="http://www.miliao.com/" target="_blank">米聊</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//www.duokan.com/" target="_blank">多看</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//game.xiaomi.com/" target="_blank">游戏</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//b.mi.com/?client_id=180100031058&masid=17409.0358"
+                            target="_blank">政企服务</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//xiaomi.tmall.com/" target="_blank">小米天猫店</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//privacy.mi.com/all/zh_CN/" target="_blank">小米集团隐私政策</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/f516fe9e2c01.html"
+                            target="_blank">小米公司儿童信息保护规则</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//m.mi.com/support/module?id=63&headless=1" target="_blank">小米商城隐私政策</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//www.mi.com/aptitude/list?id=62" target="_blank">小米商城用户协议</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="//static.mi.com/feedback/" target="_blank">问题反馈</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="javascript:void(0);" class="J_siteGlobalRegion">Select Location</a>
+                    </p>
+                    <p>
+                        <a rel="nofollow" href="http://www.mi.com/beihu" target="_blank">北京互联网法院法律服务工作站</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="http://www.cca.org.cn/" target="_blank">中国消费者协会</a>
+                        <span class="sep">|</span>
+                        <a rel="nofollow" href="http://www.bj315.org/" target="_blank">北京市消费者协会</a>
+                    </p>
+                    <p>
+                        &copy;
+                        <a href="javascript:;" target="_blank" title="mi.com">mi.com</a> 京ICP证110507号
+                        <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备10046444号</a>
+                        <a rel="nofollow"
+                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"
+                            target="_blank">京公网安备11010802020134号</a>
+                        <a href="//www.mi.com/culture-license/" target="_blank">京网文[2020]0276-042号</a>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="slogan">让全球每个人都能享受科技带来的美好生活</div>
+        </div>
     </div>
 
 

@@ -19,6 +19,32 @@ li {
   list-style: none;
 }
 
+/* 按钮样式 */
+
+.btn {
+  display: inline-block;
+  width: 158px;
+  height: 38px;
+  text-align: center;
+  font: size 14px;
+  color: #b0b0b0;
+  line-height: 38px;
+  border: 1px solid #b0b0b0;
+}
+
+.btn-line-primary {
+  border-color: #ff6700;
+  background: #fff;
+  color: #ff6700;
+}
+
+.btn-small {
+  width: 187px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+}
+
 /************/
 /* 清除浮动方法0 */
 .clearfix:before,
@@ -129,9 +155,23 @@ li {
 
 .user {
   float: right;
-  line-height: 48px;
   font-size: 14px;
   color: #666;
+  background: cyan;
+}
+
+.user a {
+  /* a 是行内元素没有高度，所以需要转为块元素*/
+  display: block;
+  background: pink;
+  line-height: 40px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  vertical-align: middle;
 }
 
 /**************/
@@ -264,7 +304,7 @@ li {
 
 .row-list {
   float: left;
-  background: cyan;
+  /* background: cyan; */
 }
 
 .row-list ul li {
@@ -330,6 +370,7 @@ li {
 .container {
   /* width: 1226px; */
   margin: 0 auto;
+  /* background: cyan; */
 }
 .main-box {
   /* ********** */
@@ -359,7 +400,7 @@ li {
 /* 每组标题盒子 */
 .main-box-hd {
   height: 58px;
-  background: pink;
+  /* background: pink; */
 }
 
 .main-box .main-box-hd .more .tab-list {
@@ -403,7 +444,7 @@ li {
 .main-box-bd {
   /* height: 614px; */
   margin: 0 -14px 0;
-  background: cyan;
+  /* background: cyan; */
 }
 
 .bd-list-hd {
@@ -434,7 +475,7 @@ li {
 /* 更多不规则模块 */
 .bd-list-item-s {
   height: 93px;
-  background: cyan;
+  /* background: cyan; */
   margin-bottom: 14px;
 }
 
@@ -537,14 +578,10 @@ li {
 /*    底部  */
 /***********/
 
-.footer {
-  background: cyan;
-}
-
 .footer-service {
   /* 行高 */
   height: 80px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 4px solid #ccc;
   /* box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1); */
   /* 内容高度 */
   line-height: 80px;
@@ -589,6 +626,111 @@ a:hover {
   background: #fff;
   padding-bottom: 26px;
 }
+
+.footer {
+  background: transparent;
+}
+
+.footer-link {
+  padding: 40px 0;
+  /* background: pink; */
+}
+
+.footer .footer-link .links {
+  float: left;
+}
+
+.footer .footer-link .links dl {
+  float: left;
+  /* margin-right: 40px; */
+  width: 160px;
+}
+
+.footer .footer-link .links dl dt {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #424242;
+}
+
+.footer .footer-link .links dd {
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+.footer .footer-link .links a {
+  color: #757575;
+}
+
+.footer .footer-link .contact {
+  float: right;
+  width: 240px;
+  text-align: center;
+  margin-right: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.footer .footer-link .contact p {
+  font-size: 12px;
+  margin: 0 0 5px 0;
+}
+
+.footer .footer-link .contact .phone {
+  font-size: 22px;
+  color: #ff6700;
+  line-height: 1;
+}
+
+.footer .footer-link .contact .follow {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footer .footer-link .contact .follow a {
+  vertical-align: middle;
+}
+.footer .footer-link .contact .follow img {
+  width: 24px;
+  height: 24px;
+}
+
+/***********/
+/* 底部版权 */
+/***********/
+.site-info {
+  padding: 30px auto;
+  background: #fafafa;
+  font-size: 12px;
+}
+.site-info .logo {
+  float: left;
+  /* background: blue; */
+}
+
+.site-info img {
+  /* display: block; */
+  width: 56px;
+  height: 56px;
+}
+
+.site-info .info-text {
+  float: left;
+  color: #b0b0b0;
+  padding-left: 20px;
+}
+
+.site-info .info-text a {
+  color: #757575;
+}
+
+.site-info .slogan {
+  padding: 30px 0;
+  font-size: 18px;
+  text-align: center;
+  height: 19px;
+  color: #b0b0b0;
+}
+/* .site-info-content {
+} */
 
 /***********/
 /* 测试样式 */
