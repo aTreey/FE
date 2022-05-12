@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
 }
@@ -126,7 +130,6 @@ li {
   width: 278px;
   height: 48px;
   margin-left: 50px;
-  background-color: cyan;
 }
 
 .search input {
@@ -157,20 +160,17 @@ li {
   float: right;
   font-size: 14px;
   color: #666;
-  background: cyan;
 }
 
 .user a {
   /* a 是行内元素没有高度，所以需要转为块元素*/
   display: block;
-  background: pink;
   line-height: 40px;
 }
 
 .user img {
   width: 40px;
   height: 40px;
-  background: yellow;
   vertical-align: middle;
 }
 
@@ -179,8 +179,8 @@ li {
 /**************/
 
 .banner {
-  height: 460px;
   /* background: orange; */
+  margin-bottom: 20px;
 }
 
 .banner-nav {
@@ -285,10 +285,9 @@ li {
 /* banner bottom */
 /*****************/
 .banner-sub {
-  height: 170px;
+  /* height: 170px; */
   /* background: #888; */
-  width: 100%;
-  margin-top: 14px;
+  /* margin: 14px 0; */
 }
 
 .row {
@@ -355,7 +354,7 @@ li {
   padding-top: 18px;
   width: 70px;
   height: 82px;
-  background: cyan;
+  /* background: cyan; */
 }
 
 .channel-list-quick .item {
@@ -379,17 +378,22 @@ li {
   /* ********** */
 
   background: #f5f5f5;
+  /* 解决塌陷问题 */
+  padding-top: 4px;
   padding-bottom: 26px;
 }
 
 .main-box-rd {
-  background: cyan;
   /* **** <img> 标签会导致父容器<div>高度会多出3个像素.
   TODO: 解决办法？ 
   （设置为块元素）
   */
+  margin: 22px auto;
+}
+
+.main-box-rd img {
+  display: block;
   height: 120px;
-  margin: 26px auto;
 }
 
 .main-box-row {
@@ -624,7 +628,6 @@ a:hover {
 
 .header-wrapper {
   background: #fff;
-  padding-bottom: 26px;
 }
 
 .footer {
