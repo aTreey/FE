@@ -184,9 +184,11 @@ li {
 }
 
 .banner-nav {
+  position: relative;
   height: 460px;
   /* top： 垂直靠上，center：水平剧中 */
-  background: url("../images/bannerBg.jpeg") no-repeat top center/100%;
+  background: url("../images/banner1.webp") no-repeat top center/100%;
+  /* background: pink; */
 }
 
 .subnav {
@@ -222,6 +224,55 @@ li {
 
 .subnav ul li span {
   float: right;
+}
+
+.swipe-wrapper {
+  position: relative;
+  float: left;
+}
+
+.banner-button {
+  position: absolute;
+  /* 绝对定位可直接设置宽高 */
+  width: 41px;
+  height: 69px;
+  top: 50%;
+  margin-top: -34px;
+  line-height: 69px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+  margin-left: 234px;
+}
+
+.banner-ind {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(248, 247, 247, 0.8);
+  left: 50%;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+/* 类选择器权重10，标签选择器为1，总：11 */
+.banner-ind li {
+  float: left;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: 3px;
+  border-radius: 50%;
+}
+
+/* 权重为 10  */
+.banner-ind .selected {
+  background-color: #ff6700;
 }
 
 .notice {
@@ -775,7 +826,7 @@ a:hover {
 .float-bar ul li {
   width: 82px;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
   vertical-align: middle;
 }
