@@ -202,7 +202,8 @@ li {
   border-right: 0;
   font-size: 14px;
   color: #bfbfbf;
-
+  /* 取消轮廓线，蓝色边框 */
+  outline: none;
   /* 会将盒子撑大10px */
   padding-left: 10px;
 }
@@ -225,6 +226,42 @@ li {
   /* a 是行内元素没有高度，所以需要转为块元素*/
   display: block;
   line-height: 40px;
+}
+
+.popBox {
+  position: absolute;
+  padding: 10px;
+  right: 20px;
+  width: 100px;
+  height: 200px;
+  background-color: cyan;
+  border-radius: 10px;
+}
+
+.popBox span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -18px;
+  left: 15px;
+
+  /* border-top: 20px solid red;
+  border-right: 20px solid green;
+  border-bottom: 20px solid darkblue;
+  border-left: 20px solid purple; */
+  border: 10px solid transparent;
+  border-bottom: 10px solid cyan;
+
+  /* 为了兼容性 */
+  line-height: 0;
+  font-size: 0;
+}
+
+.popBox .textarea {
+  /* 取消蓝色框 */
+  outline: none;
+  /* 取消拖拽 */
+  resize: none;
 }
 
 .user img {
@@ -696,10 +733,10 @@ li {
 }
 
 .video-item:hover .mask {
-  /* display: block; */
+  display: block;
 }
 
-.video-item .video-item:first-child {
+.video-list .video-item:first-child {
   margin-left: 0;
 }
 
