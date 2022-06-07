@@ -232,7 +232,7 @@ li {
   position: absolute;
   padding: 10px;
   right: 20px;
-  width: 100px;
+  width: 80px;
   height: 200px;
   background-color: cyan;
   border-radius: 10px;
@@ -570,6 +570,14 @@ li {
   height: 58px;
   /* background: pink; */
 }
+/* 每组头部文字 */
+.main-box-hd .title {
+  float: left;
+  line-height: 58px;
+  font-size: 22px;
+  font-weight: 200;
+  color: #333;
+}
 
 .main-box .main-box-hd .more .tab-list {
   margin: 0;
@@ -588,13 +596,6 @@ li {
   border-bottom: 1px solid #ff6700;
 }
 
-.title {
-  float: left;
-  line-height: 58px;
-  font-size: 22px;
-  font-weight: 200;
-  color: #333;
-}
 .more {
   float: right;
   height: 58px;
@@ -620,6 +621,7 @@ li {
   width: 234px;
   margin-left: 14px;
 }
+
 .bd-list-hd img {
   display: block;
   width: 100%;
@@ -674,10 +676,10 @@ li {
 }
 
 .bd-list .title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
+  margin: 10px 10px 20px;
   color: #333;
-  width: 100%;
 }
 
 .bd-list .desc {
@@ -696,14 +698,44 @@ li {
 /* 卡片中文字公共样式 */
 .bd-list .title,
 .bd-list .desc {
+  /* display: block; */
   text-align: center;
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap; */
-  /* overflow: hidden; */
+  /* 设置单行文本展示涉略号必须满足三个条件 */
+  /* 1. 强制一行内展示文本  （默认为：normal自动换行）*/
+  /* 2. 超出部分隐藏 */
+  /* 3. 用省略号代替超出部分 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .video-box {
   background: transparent;
+}
+
+/* 单行展示省略号 */
+.singleLineEllipsis {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: pink;
+}
+
+/* 多行展示省略号 */
+.mutLineEllipsis {
+  width: 100%;
+  height: 60px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 使用伸缩盒子 */
+  display: -webkit-box;
+  /* 显示的文本行数 */
+  -webkit-line-clamp: 2;
+  /* 子元素排列方式 */
+  -webkit-box-orient: vertical;
+  background: darkkhaki;
 }
 
 .video-list {
