@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,25 +13,62 @@
             /* border-width: 5px;
             border-radius: 20px;
             border-style: solid; */
-            
+
             border: 1px solid red;
             /* 设置顶部border样式 */
             border-top: 10px solid blue;
-            
+
             border-radius: 20px;
             border-width: 10px;
-            
-            background-color:yellow;
+
+            background-color: yellow;
             /* padding-top: 10px;
             padding-left: 20px; */
             padding: 10px 10px 0px 40px;
             /* padding 影响盒子的大小 */
-            padding: 5px 10px 20px; 
+            padding: 5px 10px 20px;
+        }
+
+        /* 元素显示和隐藏 */
+        /* display: none 隐藏元素，原来位置被替代，检查元素时可以看见*/
+        /* display: block 转换为块级元素；展示元素 */
+        /* visibility: hidden;  隐藏元素，原来位置还在*/
+        #show-hidden-box {
+            /* display: none; */
+            visibility: visible;
+            width: 200px;
+            height: 200px;
+            background: cyan;
+        }
+
+        #show-hidden-box1 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+
+        /* overflow: hidden 隐藏超出部分;
+        /* overflow: visible 展示 */
+        #overflow-demo {
+            overflow: scroll;
+            width: 100px;
+            height: 100px;
+            background: red;
         }
     </style>
 </head>
+
 <body>
+
+    <!-- overflow -->
+    <div id="overflow-demo">测试文字过长时overflow 属性，阿黄黄放哈风回复范围划分为恢复微风宏伟分刚喝完和个我你哥捏个你发哪呢分为发了圣诞节氛围</div>
+
     <div>盒子盒子中的内容都有哪些东西哈哈哈隔阂宏伟黄黄是否违反玩儿文文玩儿玩儿玩儿</div>
-    
+
+    <!-- 元素显示和隐藏 -->
+    <div id="show-hidden-box">隐藏与展示元素--div1</div>
+    <div id="show-hidden-box2">隐藏与展示元素--div2</div>
+
 </body>
+
 </html>
