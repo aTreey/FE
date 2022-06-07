@@ -37,6 +37,26 @@
   color: darkcyan;
 }
 
+.icon-user:before {
+  content: "\e971";
+  color: #b0b0b0;
+}
+.icon-headphones:before {
+  content: "\e910";
+  color: #b0b0b0;
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+
+.icon-whatsapp:before {
+  content: "\ea93";
+  color: #b0b0b0;
+}
+
 /* 通配符选择器 */
 * {
   margin: 0;
