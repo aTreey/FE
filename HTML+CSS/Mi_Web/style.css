@@ -57,6 +57,23 @@
   color: #b0b0b0;
 }
 
+.icon-wrench:before {
+  content: "\e991";
+}
+
+.icon-alarm:before {
+  content: "\e950";
+}
+
+.icon-alarm:before {
+  content: "\e950";
+}
+
+.icon-clock:before {
+  content: "\e94e";
+  font-size: 20px;
+}
+
 /* 通配符选择器 */
 * {
   margin: 0;
@@ -262,6 +279,34 @@ li {
   outline: none;
   /* 取消拖拽 */
   resize: none;
+}
+
+.picBox {
+  background: pink;
+  width: 100%;
+  height: 30px;
+}
+
+.pic {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: blue;
+  margin-right: 5px;
+}
+
+.picBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.picBox p {
+  font-size: 8px;
+  /* 多行展示省略号 */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .user img {
@@ -715,7 +760,9 @@ li {
 
 /* 单行展示省略号 */
 .singleLineEllipsis {
+  font-size: 8px;
   text-align: center;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -724,6 +771,7 @@ li {
 
 /* 多行展示省略号 */
 .mutLineEllipsis {
+  font-size: 8px;
   width: 100%;
   height: 60px;
 
@@ -823,6 +871,9 @@ li {
 
 .footer-service li {
   float: left;
+  /* line-height: 25px; */
+  text-align: center;
+  font-size: 16px;
 }
 
 .footer-service ul a {
@@ -924,6 +975,11 @@ a:hover {
   background: #fafafa;
   font-size: 12px;
 }
+
+.site-info-content {
+  padding-top: 30px;
+}
+
 .site-info .logo {
   float: left;
   /* background: blue; */

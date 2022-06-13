@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2022-03-22 19:16:26
- * @LastEditTime: 2022-05-31 23:58:41
+ * @LastEditTime: 2022-06-13 13:16:40
  * @LastEditors: 480814177@qq.com 480814177@qq.com
  * @Description: 小米官网
 -->
@@ -71,10 +71,17 @@
         <div class="popBox">
             <span></span>
             <!-- 防止拖拽 -->
-            <textarea class="textarea" name="" id="" cols="10" rows="5"></textarea>
+            <textarea class="textarea" name="" id="" cols="8" rows="3"></textarea>
             <p class="singleLineEllipsis">测试单行文字展示省略号哈哈个宏伟胡歌胡歌</p>
-            <p class="mutLineEllipsis">多行文本展示省略号哈哈嗝哈哈个火锅和火锅鹅哥哥恶化规划隔阂隔阂隔阂火锅鹅火锅哈哈哈 回复未婚夫文化，行数/子元素对齐方式
-            </p>
+            <p class="mutLineEllipsis">多行文本展示省略号哈哈嗝哈哈个火锅和火锅鹅哥哥恶</p>
+
+            <!-- 文字环绕实现左边图片右边问字样式 -->
+            <div class="picBox">
+                <div class="pic">
+                    <img src="../images/service.png" alt="">
+                </div>
+                <p>使用文字环绕实现左图右文字</p>
+            </div>
         </div>
 
         <!-- banner Start-->
@@ -800,11 +807,36 @@
             <div class="footer-service w">
                 <h4>使用ul+li+a 浮动</h4>
                 <ul>
-                    <li><a href=""><img src="" alt="">预约维修服务</a></li>
-                    <li><a href=""><img src="" alt="">7天无理由退货</a></li>
-                    <li><a href=""><img src="" alt="">15天免费换货</a></li>
-                    <li><a href=""><img src="" alt="">满69元包邮</a></li>
-                    <li><a href=""><img src="" alt="">520余家售后网点</a></li>
+                    <li>
+                        <a href="">
+                            <span class="icon-clock"></span>
+                            预约维修服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-clock"></span>
+                            7天无理由退货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-clock"></span>
+                            15天免费换货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-clock"></span>
+                            满69包邮
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-clock"></span>
+                            520余家售后网点
+                        </a>
+                    </li>
                 </ul>
                 <a href="#" class="footBar-service">咨询服务</a>
             </div>
@@ -876,7 +908,7 @@
             <!-- 版权 -->
             <!--  -->
             <div class="site-info">
-                <div class="w clearfix">
+                <div class="site-info-content  w clearfix">
                     <div class="logo"><img src="../images/logo.png" alt=""></div>
                     <div class="info-text">
                         <p>
