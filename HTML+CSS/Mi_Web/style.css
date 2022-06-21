@@ -383,11 +383,11 @@ li {
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-.next {
+.arrow-next {
   right: 0;
 }
 
-.prev {
+.arrow-prev {
   left: 0;
   margin-left: 234px;
 }
@@ -965,6 +965,51 @@ a:hover {
 .footer .footer-link .contact .follow img {
   width: 24px;
   height: 24px;
+}
+
+/* 底部页码 */
+.page-wrap {
+  padding: 10px 0;
+  background: white;
+  /* 盒子中所有的行内元素和行内快元素都会居中 */
+  text-align: center;
+}
+.page-wrap a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background: "#FFFFFF";
+  line-height: 40px;
+  color: #757575;
+  font-size: 14px;
+}
+
+.page-wrap .prev,
+.page-wrap .next {
+  width: 80px;
+}
+
+.page-wrap .current,
+.page-wrap .elp {
+  background: "#FFFFFF";
+  border: none;
+}
+
+.page-wrap input {
+  outline: none;
+  height: 36px;
+  width: 45px;
+  border: 1px solid #ccc;
+}
+
+.page-wrap button {
+  outline: none;
+  height: 36px;
+  width: 60px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  font-size: 14px;
 }
 
 /***********/
