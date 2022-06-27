@@ -704,6 +704,8 @@ li {
   background-color: white;
   text-align: center;
 }
+
+/* 标签 */
 .bd-list ul li em {
   position: absolute;
   top: 2px;
@@ -734,10 +736,36 @@ li {
   margin: 0 10px 10px;
 }
 
-.bd-list .price {
-  margin: 0 10px 14px;
-  text-align: center;
-  color: #ff6700;
+.bd-list .priceContent {
+  border: 1px solid #ff6700;
+  height: 24px;
+  margin: 0 40px;
+  /* text-align: center; */
+}
+
+.bd-list .priceContent .price {
+  float: left;
+  position: relative;
+  background-color: #ff6700;
+  height: 100%;
+  padding: 0 20px;
+  color: white;
+}
+
+.price i {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent white transparent transparent;
+  border-style: solid;
+  border-width: 24px 10px 0 0;
+  right: 0;
+}
+
+.bd-list .priceContent .original {
+  background-color: "green";
+  color: #b0b0b0;
+  text-decoration: line-through;
 }
 
 /* 卡片中文字公共样式 */
