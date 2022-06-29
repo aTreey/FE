@@ -74,7 +74,11 @@
   font-size: 20px;
 }
 
-/* 通配符选择器 */
+/*************/
+/**CSS初始化***/
+/*************/
+
+/* 通配符选择器*/
 * {
   margin: 0;
   padding: 0;
@@ -97,8 +101,27 @@ p {
   display: block;
 }
 
+/* 去掉li的小圆点 */
 li {
   list-style: none;
+}
+
+img {
+  /* 低版本浏览器，img标签外有链接会有边框问题 */
+  border: 0;
+  /* 取消图片底部有空白缝隙问题 */
+  vertical-align: middle;
+}
+
+/* 设置不斜体 */
+em,
+i {
+  font-style: normal;
+}
+
+button {
+  /* 经过按钮时小手形状 */
+  cursor: pointer;
 }
 
 /* class 选择器 */
@@ -739,7 +762,7 @@ li {
 .bd-list .priceContent {
   border: 1px solid #ff6700;
   height: 24px;
-  margin: 0 40px;
+  /* margin: 0 40px; */
   /* text-align: center; */
 }
 
@@ -748,7 +771,7 @@ li {
   position: relative;
   background-color: #ff6700;
   height: 100%;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   color: white;
 }
 
@@ -763,7 +786,7 @@ li {
 }
 
 .bd-list .priceContent .original {
-  background-color: "green";
+  background-color: red;
   color: #b0b0b0;
   text-decoration: line-through;
 }
