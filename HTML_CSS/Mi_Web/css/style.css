@@ -74,56 +74,6 @@
   font-size: 20px;
 }
 
-/*************/
-/**CSS初始化***/
-/*************/
-
-/* 通配符选择器*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* 属性选择器 */
-body {
-  background-color: white;
-}
-
-a {
-  text-decoration: none;
-}
-
-h3 {
-  display: block;
-}
-
-p {
-  display: block;
-}
-
-/* 去掉li的小圆点 */
-li {
-  list-style: none;
-}
-
-img {
-  /* 低版本浏览器，img标签外有链接会有边框问题 */
-  border: 0;
-  /* 取消图片底部有空白缝隙问题 */
-  vertical-align: middle;
-}
-
-/* 设置不斜体 */
-em,
-i {
-  font-style: normal;
-}
-
-button {
-  /* 经过按钮时小手形状 */
-  cursor: pointer;
-}
-
 /* class 选择器 */
 /* 按钮样式 */
 .btn {
@@ -351,7 +301,7 @@ button {
   position: relative;
   height: 460px;
   /* top： 垂直靠上，center：水平剧中 */
-  background: url("../images/banner1.webp") no-repeat top center/100%;
+  background: url("../../images/banner1.webp") no-repeat top center/100%;
   /* background: pink; */
 }
 
