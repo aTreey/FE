@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2022-03-22 19:16:26
- * @LastEditTime: 2022-07-08 13:31:58
+ * @LastEditTime: 2022-07-19 10:18:34
  * @LastEditors: 480814177@qq.com 480814177@qq.com
  * @Description: 小米官网
 -->
@@ -13,32 +13,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo 小米商城 Xiaomi 小米电视</title>
-    <link rel="shortcut icon" href=" /favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <!-- SEO 相关 -->
     <meta name="description" content="小米">
     </meta>
     <meta name="keywords" content="Xiaomi 小米 小米商城 Redmi">
     </meta>
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body>
 
     <!--------------->
-    <!-- 顶部 -------->
+    <!-- 顶部 快速导航 -------->
     <!--------------->
-    <div class="topBar">
-        <div class="topBarNav w">
-            <a href="#">小米商城</a>
-            <a href="#">MiUI</a>
-            <a href="#">IoT</a>
-            <a href="#">云服务</a>
-            <a href="#">天星数科</a>
-            <a href="#">天星数科</a>
+    <section class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li><a href="">小米官网</a></li>
+                    <li></li>
+                    <!-- &nbsp 使用空格 -->
+                    <li><a href="" class="icon-search1">
+                            小米商城&nbsp;</a></li>
+                    <li></li>
+                    <li><a href="">MiUI</a></li>
+                    <li></li>
+                    <li><a href="">IoT</a></li>
+                    <li></li>
+                    <li><a href="">云服务</a></li>
+                    <li></li>
+                    <li><a href="">天星数科</a></li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li>
+                        <!-- &nbsp 使用空格 -->
+                        <a href="#" class="'">请登陆&nbsp;</a><a href="" class="style_orange">注册</a>
+                    </li>
+                    <li></li>
+                    <li><a href="">消息通知</a></li>
+                    <li></li>
+                    <li><a href="">购物车</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!--------------->
     <!-- banner ----->
@@ -65,7 +88,7 @@
             <div class="search">
                 <input type="text" value="输入关键词">
                 <button style="cursor: pointer">
-                    <span class="icon-search1"></span>
+                    <span class="icon-search1 style_orange"></span>
                 </button>
                 <!-- <input type="search" placeholder="输入关键词">
                 <button style="cursor: pointer">
@@ -106,14 +129,17 @@
                         <li><a href="">
                                 手机
                                 <span>&gt;</span>
-                            </a></li>
+                            </a>
+                        </li>
                         <li><a href="">
                                 电视
                                 <span>&gt;</span>
-                            </a></li>
+                            </a>
+                        </li>
                         <li><a href="">笔记本 平板
                                 <span>&gt;</span>
-                            </a></li>
+                            </a>
+                        </li>
                         <li><a href="">家电<span>&gt;</span></a></li>
                         <li><a href="">出行 穿戴<span>&gt;</span></a></li>
                         <li><a href="">智能 路由器<span>&gt;</span></a></li>

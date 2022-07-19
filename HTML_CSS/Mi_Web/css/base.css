@@ -6,6 +6,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* CSS3 盒子模型 */
+  box-sizing: border-box;
 }
 
 /* 属性选择器 */
