@@ -101,70 +101,9 @@
   color: #fff;
 }
 
-.header {
+.header2 {
   padding: 20px 0;
   height: 70px;
-}
-
-.log {
-  float: left;
-  width: 56px;
-  height: 56px;
-  border-radius: 23px;
-  background-color: #ff6700;
-  /* background:url(../images/logo.png) */
-}
-.nav {
-  float: left;
-}
-/* 因为li 是块级元素，所以需要加float */
-.nav ul li {
-  float: left;
-}
-
-.nav ul li a {
-  display: block;
-  padding: 0 15px;
-  line-height: 56px;
-  font-size: 16px;
-  color: #333;
-  /* background: blue; */
-}
-.nav ul li a:hover {
-  /* 实现下划线样式 */
-  border-bottom: 1.5px solid #ff6700;
-  color: #ff6700;
-}
-
-.search {
-  float: left;
-  /* 总宽412px */
-  width: 278px;
-  height: 48px;
-  margin-left: 50px;
-}
-
-.search input {
-  float: left;
-  /* 需要减去按钮的宽度和 padding-left*/
-  width: 219px;
-  height: 46px;
-  border: 1px solid rgb(153, 153, 153);
-  border-right: 0;
-  font-size: 14px;
-  color: #bfbfbf;
-  /* 取消轮廓线，蓝色边框 */
-  outline: none;
-  /* 会将盒子撑大10px */
-  padding-left: 10px;
-}
-
-.search button {
-  /* 设置float 消除行内块元素间的间隙 */
-  float: right;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgb(153, 153, 153);
 }
 
 .user {

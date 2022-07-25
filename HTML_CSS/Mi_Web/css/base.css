@@ -17,6 +17,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #ff6700;
 }
 
 h3 {
@@ -48,4 +53,10 @@ i {
 button {
   /* 经过按钮时小手形状 */
   cursor: pointer;
+}
+
+button,
+input {
+  border: 0;
+  outline: none;
 }

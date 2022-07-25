@@ -38,6 +38,11 @@
   color: darkcyan;
 }
 
+.icon-circle-down::after {
+  content: "\ea44";
+  font-size: 10px;
+}
+
 /* 样式 */
 .style_orange {
   color: #ff6700;
@@ -89,4 +94,76 @@
   height: 12px;
   background-color: #666;
   margin: 16px 14px 0;
+}
+
+.header {
+  position: relative;
+  height: 96px;
+  padding: 20px 0;
+  /* background: cyan; */
+}
+
+.logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.logo a {
+  display: block;
+  width: 56px;
+  height: 56px;
+  background: url(../../images/logo.png) no-repeat center/100%;
+
+  /* 不让文字展示出来 */
+  /* 方案1 */
+  font-size: 0;
+
+  /* 方案2 小米做法*/
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/* 搜索导航 */
+.nav {
+  position: absolute;
+  left: 180px;
+  top: 36px;
+}
+
+.nav a {
+  /* 行内元素可以指定左右的值,上下值无效 */
+  margin: 0 10px;
+}
+.nav a:hover {
+  /* 实现下划线样式 */
+  border-bottom: 1.5px solid #ff6700;
+  color: #ff6700;
+}
+
+.search {
+  position: absolute;
+  /* width: 293px; */
+  height: 48px;
+  right: 0;
+  border: 1px solid #666;
+  background: yellow;
+}
+
+.search input {
+  width: 240px;
+  height: 46px;
+  border: none;
+  background-color: #fff;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 0;
+}
+
+.search button {
+  /* 设置float 消除行内块元素间的间隙 */
+  float: right;
+  width: 48px;
+  height: 46px;
+  /* border: 1px solid rgb(153, 153, 153); */
 }
