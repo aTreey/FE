@@ -9,6 +9,9 @@
 .icon-location2:before {
   content: "\e948";
 }
+.icon-cart:before {
+  content: "\e93a";
+}
 
 .icon-whatsapp:before {
   content: "\ea93";
