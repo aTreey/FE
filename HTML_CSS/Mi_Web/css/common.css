@@ -96,6 +96,39 @@
   margin: 16px 14px 0;
 }
 
+.shopcar {
+  position: relative;
+  color: #b0b0b0;
+  font-size: 12px;
+  width: 120px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.shopcar::before {
+  content: "\e93a";
+  font-family: "icomoon";
+}
+
+.shopcar::after {
+  content: "\ea43";
+  font-family: "icomoon";
+  margin-left: 25px;
+}
+
+.count {
+  position: absolute;
+  top: 2px;
+  right: 36px;
+  line-height: 14px;
+  font-size: 8px;
+  color: #fff;
+  padding: 1px 5px;
+  background-color: red;
+  border-radius: 7px 7px 7px 0;
+}
+
 .header {
   position: relative;
   height: 96px;
@@ -165,5 +198,5 @@
   float: right;
   width: 48px;
   height: 46px;
-  /* border: 1px solid rgb(153, 153, 153); */
+  border-left: 1px solid rgb(153, 153, 153);
 }
