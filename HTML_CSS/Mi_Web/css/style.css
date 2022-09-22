@@ -78,12 +78,6 @@
 
 /************/
 
-/* 版心宽度 */
-.w {
-  width: 1226px;
-  margin: 0 auto;
-}
-
 .topBar {
   height: 42px;
   background-color: #333;
@@ -104,18 +98,6 @@
 .header2 {
   padding: 20px 0;
   height: 70px;
-}
-
-.user {
-  float: right;
-  font-size: 14px;
-  color: #666;
-}
-
-.user a {
-  /* a 是行内元素没有高度，所以需要转为块元素*/
-  display: block;
-  line-height: 40px;
 }
 
 .popBox {
