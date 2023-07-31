@@ -36,7 +36,7 @@ class TestItem extends PureComponent {
   }
 
   handleClick() {
-    ///// dangerouslySetInnerHTML不符合单项数据流 ////
+    // /// dangerouslySetInnerHTML不符合单项数据流 ////
     // this.props.list = [];
 
     console.log('handleClick ---删除了--' + this.props.index)
@@ -50,11 +50,12 @@ TestItem.propTypes = {
   content: PropTypes.string,
   index: PropTypes.number,
   deleteItem: PropTypes.func,
-  prefix: PropTypes.string.isRequired // 必须传值的属性，不传回报错
+  prefix: PropTypes.string.isRequired, // 必须传值的属性，不传回报错
+  suffix: PropTypes.string,
 }
 
 TestItem.defaultProps = {
-  suffix: 'Demo'
+  suffix: 'Demo',
 }
 
 export default TestItem

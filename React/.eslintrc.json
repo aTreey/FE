@@ -18,11 +18,20 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint", 
+        "react-hooks",
+        "prettier"
     ],
+    "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+    },
     "rules": {
-        "indent": ["warn", "tab"],
+        "react/react-in-jsx-scope": "off",
+        "camelcase": "error",
+        "spaced-comment": "error",
         "quotes": ["error", "single"],
-        "semi": ["error", "never"]
+        "no-duplicate-imports": "error"
     }
 }
