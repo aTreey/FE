@@ -31,7 +31,8 @@ export function HookExample() {
 
   useEffect(() => {
     console.log('HookExample useEffect-----')
-    document.title = `你点击了${count}次`
+    document.title = 'React Hooks Demo'
+    console.log('🚀 ~ file: Demo.jsx:36 ~ useEffect ~ count:', count)
   }, [count])
 
   return (
