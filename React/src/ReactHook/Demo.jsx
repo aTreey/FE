@@ -10,7 +10,7 @@ export class Example extends PureComponent {
   render() {
     return (
       <div>
-        <p>class 实现: 你点击了{this.state.count}次数</p>
+        <text>class 实现: 你点击了{this.state.count}次数</text>
         <button
           onClick={() => {
             this.setState({ count: this.state.count + 1 })
@@ -37,7 +37,7 @@ export function HookExample() {
 
   return (
     <div>
-      <p>hook 实现: 你点击了{count}次数</p>
+      <text>hook 实现: 你点击了{count}次数</text>
       <button
         onClick={() => {
           setCount(count + 1)

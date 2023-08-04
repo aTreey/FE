@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import ReactDOM from 'react-dom'
 
 /**
  * useReducer 是useState的一个封装
@@ -57,9 +56,11 @@ function Counter({ initialCount }) {
   )
 }
 
-export const UseReducerDemo = (props) => (
+const UseReducerDemo = (props) => (
   <div>
     <h3>useReducer 使用</h3>
     <Counter initialCount={{ count: 1 }}></Counter>
   </div>
 )
+
+export { UseReducerDemo }

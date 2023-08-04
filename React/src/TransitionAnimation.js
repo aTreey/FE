@@ -4,7 +4,7 @@ class TransitionAnimation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isShow: true
+      isShow: true,
     }
 
     this.toToggle = this.toToggle.bind(this)
@@ -14,9 +14,7 @@ class TransitionAnimation extends Component {
     return (
       <div>
         {/* 通过css 实现动画 */}
-        <div className={this.state.isShow ? 'show' : 'hidden'}>
-          react 简单动画实现
-        </div>
+        <div className={this.state.isShow ? 'show' : 'hidden'}>react 简单动画实现</div>
         <div>
           <button onClick={this.toToggle}>点击执行动画</button>
         </div>

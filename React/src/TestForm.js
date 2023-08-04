@@ -7,7 +7,7 @@ class FormDemo extends PureComponent {
     this.state = {
       userName: '',
       gender: 'main',
-      checked: true
+      checked: true,
     }
 
     this.submitHandler = this.submitHandler.bind(this)
@@ -26,7 +26,7 @@ class FormDemo extends PureComponent {
     const name = target.name
 
     this.setState({
-      [name]: value
+      [name]: value,
     })
   }
 
@@ -37,18 +37,18 @@ class FormDemo extends PureComponent {
           <label>情输入您的姓名：</label>
           <input
             // id="userName"
-            type="text"
-            name="userName"
-            placeholder="请输入姓名"
+            type='text'
+            name='userName'
+            placeholder='请输入姓名'
             onChange={this.handleChange}
             value={this.state.userName}
           ></input>
           <br />
-          <label htmlFor="checkbox">是或否: </label>
+          <label htmlFor='checkbox'>是或否: </label>
           <input
-            id="checkbox"
-            name="checkbox"
-            type="checkbox"
+            id='checkbox'
+            name='checkbox'
+            type='checkbox'
             onChange={this.handleChange}
             checked={this.state.checked}
           ></input>
@@ -70,7 +70,7 @@ class FormDemo extends PureComponent {
           </select> */}
           <br />
           <p>
-            <button type="submit">提交</button>
+            <button type='submit'>提交</button>
           </p>
         </form>
       </div>

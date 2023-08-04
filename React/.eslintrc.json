@@ -12,6 +12,9 @@
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
@@ -23,6 +26,8 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "camelcase": "error",
     "spaced-comment": "error",
     "quotes": ["error", "single"],
