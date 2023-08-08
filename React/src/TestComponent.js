@@ -16,6 +16,7 @@ import { App1 } from './ReactHook/UseCallbackDemo'
 import { ClassComponentDemo, UseCallbackDemo } from './ReactHook/UseCallbackDemo2'
 import { Demo } from './ReactHook/useCallbackClass'
 import { App, App2 } from './ReactHook/useCallback'
+import { UseMemoApp } from './ReactHook/useMemoDemo'
 
 class TestComponent extends Component {
   // 初始化阶段
@@ -145,9 +146,7 @@ class TestComponent extends Component {
             value={this.state.inputV}
             onChange={this.inputChange}
           ></input>
-
           <button onClick={this.addList}>增加按钮</button>
-
           <ul
             ref={(ul) => {
               this.ul = ul
@@ -186,14 +185,12 @@ class TestComponent extends Component {
               ))}
             </TransitionGroup>
           </ul>
-
           <div>
             <h3>React 动画</h3>
             <hr />
             <TransitionAnimation />
             <KeyframesAnimation />
           </div>
-
           <div>
             <h3>React input </h3>
             <hr />
@@ -222,8 +219,10 @@ class TestComponent extends Component {
             <Demo></Demo>
             <hr></hr>
             <App></App>
-            {/* <App2></App2> */}
-            <></>
+            <hr></hr>
+            <App2></App2>
+            <hr></hr>
+            <UseMemoApp></UseMemoApp>
           </div>
         </div>
       </Fragment>

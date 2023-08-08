@@ -6,7 +6,7 @@ let fnn2 = null
 const ExpensiveComponents = memo(({ onClick }) => {
   const date = new Date()
   console.log('🚀 ~ file: useCallback.js:8 ~ ExpensiveComponents ~ render date:', date)
-  return <h1 onClick={onClick}>{date.getSeconds()}耗时组件！渲染耗时！！！</h1>
+  return <h3 onClick={onClick}>{date.getSeconds()}耗时组件！渲染耗时！！！</h3>
 })
 
 function Com1({ p1 }) {
@@ -35,11 +35,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>每次点击fn1都是新的</h2>
+        <h4>每次点击fn1都是新的</h4>
         <Com1 p1={this.state.p1}></Com1>
         <button onClick={() => this.setState({ p1: this.state.p1 + 1 })}> p1+1 </button>
         <hr></hr>
-        <h2>不用重复生成fn1</h2>
+        <h4>不用重复生成fn1</h4>
         <Com2 p2={this.state.p2}></Com2>
         <button onClick={() => this.setState({ p2: this.state.p2 + 1 })}> p2+1 </button>
       </div>
@@ -58,12 +58,13 @@ const App2 = () => {
 
   return (
     <div>
-      <h2>每次点击fn1都是新的</h2>
-      <Com1 p1={this.state.p1}></Com1>
+      <h4>使用函数组件</h4>
+      <h5>每次点击fn1都是新的</h5>
+      <Com1 p1={p1}></Com1>
       <button onClick={() => setP1(p1 + 1)}> p1+1 </button>
       <hr></hr>
-      <h2>不用重复生成fn1</h2>
-      <Com2 p2={this.state.p2}></Com2>
+      <h4>不用重复生成fn1</h4>
+      <Com2 p2={p2}></Com2>
       <button onClick={() => setP1(p2 + 1)}> p2+1 </button>
     </div>
   )
