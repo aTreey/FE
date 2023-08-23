@@ -20,7 +20,7 @@ function Com1() {
   return (
     <div>
       {console.log('Com1 渲染----')}
-      <text>Comm1 组件</text>
+      <p>Comm1 组件</p>
     </div>
   )
 }

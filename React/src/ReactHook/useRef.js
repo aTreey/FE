@@ -10,11 +10,14 @@ function Counter() {
   const [count, setCount] = useState(0)
   const prevCountRef = useRef(0)
   //FIXME: 每次都创建新的对象，useRef不会
-  const createRef = React.createRef()
+  // const createRef = React.createRef()
 
   useEffect(() => {
     prevCountRef.current = count
-    console.log('后执行')
+    console.log(
+      '🚀 ~ file: useRef.js:17 ~ useEffect ~ 后执行 修改prevCountRef 的值:',
+      prevCountRef.current,
+    )
   })
 
   const prevCount = prevCountRef.current
@@ -24,7 +27,7 @@ function Counter() {
       <h4>
         Now: {count}, before: {prevCount}
       </h4>
-      {console.log('渲染中 --- 先执行---')}
+      {console.log('🚀 ~ file: useRef.js:27 ~ Counter ~ 渲染中 --- 先执行---')}
       <button onClick={() => setCount(count + 1)}> 更新Count </button>
     </div>
   )
@@ -85,10 +88,8 @@ const RefDemo = (props) => {
       <h3>使用 create 每次都创建新的对象，而useRef不会，react内部做了优化 </h3>
       <hr></hr>
       {show ? <Counter></Counter> : null}
-      {/* <hr></hr> */}
-      {show ? <Counter1></Counter1> : null}
-      {/* <hr></hr> */}
-      {show ? <Counter2></Counter2> : null}
+      {/* {show ? <Counter1></Counter1> : null}
+      {show ? <Counter2></Counter2> : null} */}
     </div>
   )
 }
