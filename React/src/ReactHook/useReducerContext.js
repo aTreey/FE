@@ -1,7 +1,9 @@
-import React, { Children, createContext, useReducer } from 'react'
+import React, { Children, createContext, useReducer, useState } from 'react'
 
 /**
  * useReducer 是useState的一个封装
+ * useState的替代方案。接受一个(state, action) => newState的reducer，然后回传现在的state 以及其配套的dispatch方法。
+ *
  */
 
 // 初始值：0
@@ -22,6 +24,8 @@ function reducer(state, action) {
       return { count: state.count + 1 }
     case 'decrement':
       return { count: state.count - 1 }
+    default:
+      throw new Error()
   }
 }
 
@@ -36,7 +40,7 @@ function init(initState) {
 }
 
 const ContextProvider = (props) => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 })
+  const [state, dispatch] = useReducer(reducer, init(0))
   return <myContext.Provider value={{ state, dispatch }}>{props.children}</myContext.Provider>
 }
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { myContext } from './reducer'
+import { myContext } from './useReducerContext'
 
 function CounterTest() {
   const { state, dispatch } = useContext(myContext)

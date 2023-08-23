@@ -81,6 +81,8 @@ const UseMemoApp = (props) => {
   }, [a, b])
   return (
     <div>
+      <h2>UseMemo 使用</h2>
+      <hr></hr>
       <Parent a={a} b={b} valueA={`直接取A值:${a}`}></Parent>
       {/* <Parent valueB={`B组件值由A和B决定:${valueB}`}></Parent> */}
       <button onClick={() => setA(a + 1)}> 改变a </button>

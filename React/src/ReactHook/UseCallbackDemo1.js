@@ -90,7 +90,7 @@ const Parent = memo(({ a, c }) => {
   )
 })
 
-const Demo = (props) => {
+const UseCallbackDemo1 = (props) => {
   const [a, setA] = useState(0)
   const [b, setB] = useState(0)
 
@@ -109,27 +109,27 @@ const Demo = (props) => {
       <button onClick={() => setA(a + 1)}>改变 a </button>
       <button onClick={() => setB(b + 1)}>改变 b </button>
       <button onClick={handleClick}>点击按钮 （useCallback）</button>
-      <p>
-        class 组件 行内使用箭头函数
+      {/* <p>
+        <h3>class 组件 行内使用箭头函数</h3>
         <Foo></Foo>
-      </p>
+      </p> */}
 
       <p>
-        函数组件 定义了箭头函数
+        <h3>函数组件 定义了箭头函数</h3>
         <Foo2></Foo2>
       </p>
 
       <p>
-        函数组件 使用了useCallback
+        <h3>函数组件 使用了useCallback</h3>
         <Foo3useCallback></Foo3useCallback>
       </p>
 
       <p>
-        函数组件 使用了 memo + useCallback
+        <h3>函数组件 使用了 memo + useCallback</h3>
         <Foo3UseMemoAndUseCallback></Foo3UseMemoAndUseCallback>
       </p>
     </div>
   )
 }
 
-export { Foo, Foo1, Foo2, Foo3useCallback, Demo }
+export { Foo, Foo1, Foo2, Foo3useCallback, UseCallbackDemo1 }

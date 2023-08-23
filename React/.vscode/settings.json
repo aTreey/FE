@@ -1,3 +1,4 @@
 {
-  "liveSassCompile.settings.includeItems": []
+  "liveSassCompile.settings.includeItems": [],
+  "C_Cpp.errorSquiggles": "enabled"
 }

@@ -9,14 +9,21 @@ import './style.css'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import FormDemo from './TestForm'
 import Game from './Game/Game'
-import { Example, HookExample } from './ReactHook/Demo'
-import { UseReducerDemo } from './ReactHook/useReduce'
+import { Example, HookExample } from './ReactHook/useEffectDemo'
+import { UseReducerDemo, UseReducerStartDemo } from './ReactHook/useReducerStart'
 import { UseContextDemo, UseContextUseReducerDemo } from './ReactHook/useContext'
-import { App1 } from './ReactHook/UseCallbackDemo'
-import { ClassComponentDemo, UseCallbackDemo } from './ReactHook/UseCallbackDemo2'
-import { Demo } from './ReactHook/useCallbackClass'
+
+import { UseCallbackDemo } from './ReactHook/UseCallbackDemo'
+import { UseCallbackDemo1 } from './ReactHook/UseCallbackDemo1'
+import { UseCallbackDemo2, ClassComponentDemo } from './ReactHook/UseCallbackDemo2'
+
 import { App, App2 } from './ReactHook/useCallback'
 import { UseMemoApp } from './ReactHook/useMemoDemo'
+import { RefDemo } from './ReactHook/useRef'
+import { ForwardRefDemo } from './ReactHook/forwardRef'
+import { UseImperativeHandleDemo } from './ReactHook/useImperativeHandle'
+import { UseImperativeHandleDemo2 } from './ReactHook/useImperativeHandle2'
+import { CustomHooksDemo } from './ReactHook/useLayoutEffect'
 
 class TestComponent extends Component {
   // 初始化阶段
@@ -207,22 +214,25 @@ class TestComponent extends Component {
             <Example></Example>
             <HookExample></HookExample>
             <hr></hr>
+            <UseReducerStartDemo></UseReducerStartDemo>
             <UseReducerDemo></UseReducerDemo>
-            <hr></hr>
+
             <UseContextDemo></UseContextDemo>
-            <hr></hr>
             <UseContextUseReducerDemo></UseContextUseReducerDemo>
-            <hr></hr>
-            <App1></App1>
-            <ClassComponentDemo></ClassComponentDemo>
+
             <UseCallbackDemo></UseCallbackDemo>
-            <Demo></Demo>
-            <hr></hr>
+            <UseCallbackDemo1></UseCallbackDemo1>
+            <UseCallbackDemo2></UseCallbackDemo2>
+            <ClassComponentDemo></ClassComponentDemo>
+
             <App></App>
-            <hr></hr>
             <App2></App2>
-            <hr></hr>
             <UseMemoApp></UseMemoApp>
+            <RefDemo></RefDemo>
+            <ForwardRefDemo></ForwardRefDemo>
+            <UseImperativeHandleDemo></UseImperativeHandleDemo>
+            <UseImperativeHandleDemo2></UseImperativeHandleDemo2>
+            <CustomHooksDemo></CustomHooksDemo>
           </div>
         </div>
       </Fragment>

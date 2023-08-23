@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { ContextProvider } from './reducer'
+import { ContextProvider } from './useReducerContext'
 import Counter from './Counter'
 import CounterTest from './CounterTest'
 
@@ -12,7 +12,7 @@ const Com1 = (props) => {
       <div>
         <br></br>
         初始值：{count}
-        <button onClick={() => {}}>count+1</button>
+        <button onClick={() => setCount((pre) => pre + 1)}>count+1</button>
       </div>
     </React.Fragment>
   )
@@ -23,7 +23,8 @@ const UseContextDemo = (props) => {
   return (
     <myContext.Provider value={{ count, setCount }}>
       <div>
-        <h3>useContext+useReducer 使用</h3>
+        <h2>useContext 使用</h2>
+        <hr></hr>
         <Com1></Com1>
       </div>
     </myContext.Provider>
@@ -33,8 +34,9 @@ const UseContextUseReducerDemo = (props) => {
   return (
     <div className='App'>
       <ContextProvider>
+        <h2>UseContextUseReducerDemo</h2>
+        <hr></hr>
         <Counter></Counter>
-        <br></br>
         <CounterTest></CounterTest>
       </ContextProvider>
       <></>

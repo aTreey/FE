@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useState, useReducer } from 'react'
 
 /**
  * useReducer 是useState的一个封装
@@ -6,8 +6,38 @@ import React, { useReducer } from 'react'
 
 // 初始值：0
 const initialCountState = 0
+const initState = { count: 0 }
 
 /**
+ * 未使用useReducer 使用 useState 实现
+ */
+
+function Counter({ initialCount }) {
+  const [count, setCount] = useState(initialCount)
+  return (
+    <>
+      <h2>useReducer 使用</h2>
+      <hr></hr>
+      <h4>未使用useReducer 使用 useState 实现</h4>
+      Count: {count}
+      <button onClick={() => setCount({ initialCount: 0 })}>Reset</button>
+      <button onClick={() => setCount((prevCount) => ({ initialCount: prevCount + 1 }))}>+</button>
+      <button onClick={() => setCount((prevCount) => ({ initialCount: prevCount - 1 }))}>-</button>
+    </>
+  )
+}
+
+const UseReducerStartDemo = (props) => {
+  const [state, dispatch] = useReducer(reducer, { count: 0 })
+  return (
+    <div>
+      <Counter count={initState}></Counter>
+    </div>
+  )
+}
+
+/**
+ * 使用useReducer 实现
  *  reducer 的第一个参数，输入旧的 state 根据 action 返回新的 state，这就是reducer的作用
  * @param {*} state 输入的state
  * @param {*} action 根据action 返回新的值
@@ -34,7 +64,7 @@ function init(initialCountState) {
   return { count: initialCountState.count + 1 }
 }
 
-function Counter({ initialCount }) {
+function Counter1({ initialCount }) {
   const [state, dispatch] = useReducer(reducer, initialCount, init)
 
   return (
@@ -58,9 +88,9 @@ function Counter({ initialCount }) {
 
 const UseReducerDemo = (props) => (
   <div>
-    <h3>useReducer 使用</h3>
-    <Counter initialCount={{ count: 1 }}></Counter>
+    <h4>useReducer 使用</h4>
+    <Counter1 initialCount={{ count: 1 }}></Counter1>
   </div>
 )
 
-export { UseReducerDemo }
+export { UseReducerDemo, UseReducerStartDemo }

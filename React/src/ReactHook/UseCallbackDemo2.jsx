@@ -1,5 +1,5 @@
 import React, { PureComponent, useEffect, useState, useCallback } from 'react'
-import { Foo, Foo1, Foo2 } from './useCallbackClass'
+import { Foo, Foo1, Foo2 } from './UseCallbackDemo1'
 
 const ClassComponentDemo = (props) => {
   const [a, setA] = useState(0)
@@ -20,9 +20,11 @@ const ClassComponentDemo = (props) => {
     </div>
   )
 }
-const UseCallbackDemo = (props) => {
+const UseCallbackDemo2 = (props) => {
   return (
     <div>
+      <h2>UseCallbackDemo2</h2>
+      <hr></hr>
       <h3>Class 组件渲染</h3>
       <Foo></Foo>
       <br></br>
@@ -31,4 +33,4 @@ const UseCallbackDemo = (props) => {
   )
 }
 
-export { ClassComponentDemo, UseCallbackDemo }
+export { ClassComponentDemo, UseCallbackDemo2 }

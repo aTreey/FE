@@ -30,9 +30,14 @@ export function HookExample() {
   const [count, setCount] = useState(0) // 函数退出后会”消失”
 
   useEffect(() => {
-    console.log('HookExample useEffect-----')
+    console.log('🚀 ~ file: useEffectDemo.jsx:33 ~ HookExample ~ useEffect:', useEffect)
     document.title = 'React Hooks Demo'
-    console.log('🚀 ~ file: Demo.jsx:36 ~ useEffect ~ count:', count)
+
+    console.log('🚀 ~ file: useEffectDemo.jsx:36 ~ HookExample ~ count:', count)
+
+    return () => {
+      console.log('🚀 ~ file: useEffectDemo.jsx:41 ~ return ~ HookExample 销毁:')
+    }
   }, [count])
 
   return (
@@ -45,6 +50,15 @@ export function HookExample() {
       >
         点我呀
       </button>
+
+      <p>
+        <pre>
+          <code>
+            每次函数执行，首先执行的是清理函数： {`return () => {}`}，再执行：{`return()`}{' '}
+            最后根据副作用执行： {`useEffect((), [])`} 中的代码
+          </code>
+        </pre>
+      </p>
     </div>
   )
 }
