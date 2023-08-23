@@ -16,9 +16,11 @@ import { UseContextDemo, UseContextUseReducerDemo } from './ReactHook/useContext
 import { UseCallbackDemo } from './ReactHook/UseCallbackDemo'
 import { UseCallbackDemo1 } from './ReactHook/UseCallbackDemo1'
 import { UseCallbackDemo2, ClassComponentDemo } from './ReactHook/UseCallbackDemo2'
-
 import { App, App2 } from './ReactHook/useCallback'
+
+import { UseMemoStartDemo } from './ReactHook/useMemoStart'
 import { UseMemoApp } from './ReactHook/useMemoDemo'
+
 import { RefDemo } from './ReactHook/useRef'
 import { ForwardRefDemo } from './ReactHook/forwardRef'
 import { UseImperativeHandleDemo } from './ReactHook/useImperativeHandle'
@@ -211,7 +213,8 @@ class TestComponent extends Component {
           <div>
             <h3>React Hook</h3>
             <hr></hr>
-            <Example></Example>
+
+            {/* <Example></Example>
             <HookExample></HookExample>
             <hr></hr>
             <UseReducerStartDemo></UseReducerStartDemo>
@@ -227,12 +230,14 @@ class TestComponent extends Component {
 
             <App></App>
             <App2></App2>
-            <UseMemoApp></UseMemoApp>
+            <UseMemoStartDemo></UseMemoStartDemo> */}
+
+            {/* <UseMemoApp></UseMemoApp> */}
             <RefDemo></RefDemo>
-            <ForwardRefDemo></ForwardRefDemo>
+            {/* <ForwardRefDemo></ForwardRefDemo>
             <UseImperativeHandleDemo></UseImperativeHandleDemo>
             <UseImperativeHandleDemo2></UseImperativeHandleDemo2>
-            <CustomHooksDemo></CustomHooksDemo>
+            <CustomHooksDemo></CustomHooksDemo> */}
           </div>
         </div>
       </Fragment>

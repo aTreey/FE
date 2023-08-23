@@ -23,8 +23,11 @@ const ButtonComponent = ({ value }) => {
   )
 }
 
+/**
+ * 函数组件，有props
+ */
 function Parent({ a, b, valueA, valueB }) {
-  // FIXME: 使用了useMemo 只有 a的 值变化的时候才会重新计算
+  // FIXME:  使用了useMemo 只有 a的 值变化的时候才会重新计算
   const UseMemoA = useMemo(() => {
     return (
       <div>
