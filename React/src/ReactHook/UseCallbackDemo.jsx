@@ -77,8 +77,9 @@ class UseCallbackDemo extends Component {
         <br></br>
         <h2>useCallback使用</h2>
         <hr></hr>
-        <h4>测试使用了useCallback和未使用useCallback 的区别</h4>
+        <h3>useCallback Demo</h3>
         <p>
+          <h4>测试使用了useCallback和未使用useCallback 的区别</h4>
           1. root是 class 组件，state 有 num, name, count 三个属性
           组件加载完后会启动一个定时器，每3执行一次count+1 <br></br>
           2. 子组件有修改 button 和 TestUseCallback <br></br>

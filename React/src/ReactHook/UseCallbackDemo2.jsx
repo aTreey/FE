@@ -23,7 +23,7 @@ const ClassComponentDemo = (props) => {
 const UseCallbackDemo2 = (props) => {
   return (
     <div>
-      <h2>UseCallbackDemo2</h2>
+      <h3>useCallbackDemo2</h3>
       <hr></hr>
       <h3>Class 组件渲染</h3>
       <Foo></Foo>
