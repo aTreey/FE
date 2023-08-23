@@ -27,7 +27,7 @@ const ButtonComponent = ({ value }) => {
  * 函数组件，有props
  */
 function Parent({ a, b, valueA, valueB }) {
-  // FIXME:  使用了useMemo 只有 a的 值变化的时候才会重新计算
+  // FIXME:  useMemoChild1 不是一个组件，只是保存了一个组件渲染的结果
   const UseMemoA = useMemo(() => {
     return (
       <div>
@@ -39,7 +39,7 @@ function Parent({ a, b, valueA, valueB }) {
   console.log('🚀 ~ file: useMemoDemo.jsx:27 ~ Parent ~ 是否相等:', UseMemoA === ch)
   ch = UseMemoA
 
-  // FIXME: 没有用useMemo 因此每次都重新计算
+  // FIXME: 没有用useMemo 因此每次都重新计算，并不是一个组件，只是一个就算结果，回调函数中是一个函数组件
   const A = (
     <div>
       {console.log('🚀 ~ file: useMemoDemo.jsx:31 ~ Parent ~ A: Render')}

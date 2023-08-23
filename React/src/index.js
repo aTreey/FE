@@ -5,10 +5,7 @@ import TestComponent from './TestComponent'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <TestComponent />
-  </React.StrictMode>,
-
+  <TestComponent />,
   // 挂载在 build 文件下的 index.html 文件中的 id 为root 的 div
   document.getElementById('root'),
 )

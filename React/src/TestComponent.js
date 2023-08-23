@@ -114,10 +114,6 @@ class TestComponent extends Component {
     })
   }
 
-  componentWillMount() {
-    console.log('componentWillMount----')
-  }
-
   componentWillUnmount() {
     console.log('componentWillUnmount----')
   }
@@ -126,10 +122,6 @@ class TestComponent extends Component {
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate----')
     return true
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate---组件更新前，shouldComponentUpdate函数之后执行')
   }
 
   componentDidUpdate() {

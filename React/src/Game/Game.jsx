@@ -117,7 +117,7 @@ function Board(props) {
   function renderSquare(i) {
     return (
       <Square
-        value={squares[i]}
+        // value={squares[i]}
         onClick={() => {
           onClick(i)
         }}
@@ -217,7 +217,7 @@ export default class Game extends PureComponent {
     }
     return (
       <div className='game'>
-        <div div className='game-board'>
+        <div className='game-board'>
           <Board
             squares={current.squares}
             onClick={(i) => {
